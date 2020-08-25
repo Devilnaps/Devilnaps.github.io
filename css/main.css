@@ -1321,19 +1321,34 @@ pre code {
   display: inline-block;
 }
 .site-author-image {
-  border: 2px solid #333;
+  display: block;
+  margin: 0 auto;
+  padding: $site-author-image-padding;
   max-width: 96px;
-  padding: 2px;
+  height: $site-author-image-height;
+  border: site-author-image-border-width solid site-author-image-border-color;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  transition: 1.4s all;
+}
+.site-author-image:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -transform: rotate(360deg);
 }
 .site-author-name {
+  margin: 5px 0 0;
+  text-align: $site-author-name-align;
   color: #f5f5f5;
   font-weight: normal;
-  margin: 5px 0 0;
 }
 .site-description {
-  color: #999;
-  font-size: 1em;
   margin-top: 5px;
+  text-align: $site-description-align;
+  font-size: 1em;
+  color: #999;
 }
 .links-of-author a,
 .links-of-author span.exturl {
@@ -2620,7 +2635,7 @@ ul.breadcrumb li:last-child {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #f0ffcf;
+  background: #b8ffe4;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
