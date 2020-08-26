@@ -1,130 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/08/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
-
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>My first BLOG</title>
-    <url>/2020/08/22/My-first-BLOG/</url>
-    <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><a id="more"></a>
-
-<h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p><strong>加粗</strong></p>
-<p><em>倾斜</em></p>
-<p><strong><em>加粗倾斜</em></strong></p>
-<p><del>删除</del></p>
-<p>==高亮==</p>
-<p>上标^上标^</p>
-<p>下标<del>下标</del></p>
-<p>==列表==</p>
-<ul>
-<li>一级列表<ul>
-<li>一级分列表<ul>
-<li>一级分分列表</li>
-<li>……</li>
-</ul>
-</li>
-<li>二级分列表</li>
-</ul>
-</li>
-<li>二级列表</li>
-<li>三级列表</li>
-</ul>
-<ol>
-<li>一级列表<ol>
-<li>一级分列表<ol>
-<li>一级分分列表</li>
-<li>……</li>
-</ol>
-</li>
-<li>二级分列表</li>
-</ol>
-</li>
-<li>二级列表</li>
-<li>三级列表</li>
-</ol>
-<p>==表格==</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>==引用==</p>
-<blockquote>
-<p>一级引用</p>
-<blockquote>
-<p>二级引用</p>
-<blockquote>
-<p>三级引用</p>
-<blockquote>
-<p>……</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>==分割线==</p>
-<hr>
-<p>==代码==</p>
-<p><code>public static viod main(String[] args)&#123;&#125;</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>==链接==</p>
-<p><a href="http://www.bilibili.com/" title="bilibili">哔哩哔哩</a></p>
-<p>==图片==</p>
-<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png" alt="图片"></p>
-<p>==脚注==</p>
-<p>待解释<a href="%E8%A7%A3%E9%87%8A%E6%96%87%E6%9C%AC">^1</a></p>
-<hr>
-<p>==缩进==</p>
-<p>缩进</p>
-<p>&emsp;缩进</p>
-<p>&ensp;缩进</p>
-<p>&nbsp;缩进</p>
-<hr>
-<p>==居中==</p>
-<div align=center>居中</div>
-
-<hr>
-<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>spring 笔记</title>
     <url>/2020/08/25/spring-%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="一、IoC容器（控制反转，也叫DI：依赖注入）"><a href="#一、IoC容器（控制反转，也叫DI：依赖注入）" class="headerlink" title="一、IoC容器（控制反转，也叫DI：依赖注入）"></a>一、IoC容器（控制反转，也叫DI：依赖注入）</h1><h2 id="1、搭建spring环境"><a href="#1、搭建spring环境" class="headerlink" title="1、搭建spring环境"></a>1、搭建spring环境</h2><h3 id="①导包（5-1）"><a href="#①导包（5-1）" class="headerlink" title="①导包（5+1）"></a>①导包（5+1）</h3><a id="more"></a>
@@ -157,15 +33,6 @@
       <tags>
         <tag>spring</tag>
         <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图像测试</title>
-    <url>/2020/08/25/%E5%9B%BE%E5%83%8F%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p><img src="http://qflrz833q.hn-bkt.clouddn.com/2019-09-05-20-49-27_0.png"></p>
-]]></content>
-      <tags>
-        <tag>测试</tag>
       </tags>
   </entry>
   <entry>
@@ -300,6 +167,8 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;aplayer&#39;), &#x2F;&#x2F;播放器容器元素</span><br><span class="line">    mini: false, &#x2F;&#x2F;迷你模式</span><br><span class="line">    autoplay: false, &#x2F;&#x2F;自动播放</span><br><span class="line">    theme: &#39;#FADFA3&#39;, &#x2F;&#x2F;主题色</span><br><span class="line">    loop: &#39;all&#39;, &#x2F;&#x2F;音频循环播放, 可选值: &#39;all&#39;全部循环, &#39;one&#39;单曲循环, &#39;none&#39;不循环</span><br><span class="line">    order: &#39;random&#39;, &#x2F;&#x2F;音频循环顺序, 可选值: &#39;list&#39;列表循环, &#39;random&#39;随机循环</span><br><span class="line">    preload: &#39;auto&#39;, &#x2F;&#x2F;预加载，可选值: &#39;none&#39;, &#39;metadata&#39;, &#39;auto&#39;</span><br><span class="line">    volume: 0.7, &#x2F;&#x2F;默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span><br><span class="line">    mutex: true, &#x2F;&#x2F;互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器</span><br><span class="line">    listFolded: false, &#x2F;&#x2F;列表默认折叠</span><br><span class="line">    listMaxHeight: 90, &#x2F;&#x2F;列表最大高度</span><br><span class="line">    lrcType: 3, &#x2F;&#x2F;歌词传递方式</span><br><span class="line">    audio: [ &#x2F;&#x2F;音频信息,包含以下</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name1&#39;, &#x2F;&#x2F;音频名称</span><br><span class="line">            artist: &#39;artist1&#39;, &#x2F;&#x2F;音频艺术家</span><br><span class="line">            url: &#39;url1.mp3&#39;, &#x2F;&#x2F;音频外链</span><br><span class="line">            cover: &#39;cover1.jpg&#39;, &#x2F;&#x2F;音频封面</span><br><span class="line">            lrc: &#39;lrc1.lrc&#39;, &#x2F;&#x2F;音频歌词，配合上面的lrcType使用</span><br><span class="line">            theme: &#39;#ebd0c2&#39; &#x2F;&#x2F;切换到此音频时的主题色，比上面的 theme 优先级高</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name2&#39;, &#x2F;&#x2F;如果只有一首歌，删掉这一块，如有更多歌曲按此格式逐渐往下添加</span><br><span class="line">            artist: &#39;artist2&#39;,</span><br><span class="line">            url: &#39;url2.mp3&#39;,</span><br><span class="line">            cover: &#39;cover2.jpg&#39;,</span><br><span class="line">            lrc: &#39;lrc2.lrc&#39;,</span><br><span class="line">            theme: &#39;#46718b&#39;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <p>【5】部署：放置在自己想的位置（比如：\themes\next\layout_macro\sidebar.njk）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;&#x2F;dist&#x2F;APlayer.min.css&quot;&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;aplayer&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;dist&#x2F;APlayer.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;dist&#x2F;music.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
 <hr>
 <h3 id="添加博客运行时间"><a href="#添加博客运行时间" class="headerlink" title="添加博客运行时间"></a>添加博客运行时间</h3><p>【1】在 \themes\next\layout_partials\footer.njk 下添加以下代码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;timeDate&quot;&gt;载入天数...&lt;&#x2F;span&gt;&lt;span id&#x3D;&quot;times&quot;&gt;载入时分秒...&lt;&#x2F;span&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var now &#x3D; new Date(); </span><br><span class="line">    function createtime() &#123; </span><br><span class="line">        var grt&#x3D; new Date(&quot;08&#x2F;10&#x2F;2018 17:38:00&quot;);&#x2F;&#x2F;在此处修改你的建站时间，格式：月&#x2F;日&#x2F;年 时:分:秒</span><br><span class="line">        now.setTime(now.getTime()+250); </span><br><span class="line">        days &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 &#x2F; 24; dnum &#x3D; Math.floor(days); </span><br><span class="line">        hours &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 - (24 * dnum); hnum &#x3D; Math.floor(hours); </span><br><span class="line">        if(String(hnum).length &#x3D;&#x3D;1 )&#123;hnum &#x3D; &quot;0&quot; + hnum;&#125; minutes &#x3D; (now - grt ) &#x2F; 1000 &#x2F;60 - (24 * 60 * dnum) - (60 * hnum); </span><br><span class="line">        mnum &#x3D; Math.floor(minutes); if(String(mnum).length &#x3D;&#x3D;1 )&#123;mnum &#x3D; &quot;0&quot; + mnum;&#125; </span><br><span class="line">        seconds &#x3D; (now - grt ) &#x2F; 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); </span><br><span class="line">        snum &#x3D; Math.round(seconds); if(String(snum).length &#x3D;&#x3D;1 )&#123;snum &#x3D; &quot;0&quot; + snum;&#125; </span><br><span class="line">        document.getElementById(&quot;timeDate&quot;).innerHTML &#x3D; &quot;本站已安全运行 &quot;+dnum+&quot; 天 &quot;; </span><br><span class="line">        document.getElementById(&quot;times&quot;).innerHTML &#x3D; hnum + &quot; 小时 &quot; + mnum + &quot; 分 &quot; + snum + &quot; 秒&quot;; </span><br><span class="line">    &#125; </span><br><span class="line">setInterval(&quot;createtime()&quot;,250);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
@@ -407,9 +276,147 @@
 </div></div>
 
 <hr>
+<h3 id="简体-繁体切换"><a href="#简体-繁体切换" class="headerlink" title="简体/繁体切换"></a>简体/繁体切换</h3><p>【1】创建 blog\source\js\tw_cn.js 添加<a href="https://tding.top/js/tw_cn.js">这里</a>复制的代码</p>
+<p>【2】创建 blog\source_data\footer.njk 添加代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;translate-style&quot;&gt;</span><br><span class="line">繁&#x2F;简：&lt;a id&#x3D;&quot;translateLink&quot; href&#x3D;&quot;javascript:translatePage();&quot;&gt;繁体</span><br><span class="line">&lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;tw_cn.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">var defaultEncoding &#x3D; 2; &#x2F;&#x2F;网站编写字体是否繁体，1-繁体，2-简体</span><br><span class="line">var translateDelay &#x3D; 0; &#x2F;&#x2F;延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0</span><br><span class="line">var cookieDomain &#x3D; &quot;https:&#x2F;&#x2F;tding.top&#x2F;&quot;; &#x2F;&#x2F;Cookie地址, 一定要设定, 通常为你的网址</span><br><span class="line">var msgToTraditionalChinese &#x3D; &quot;繁体&quot;; &#x2F;&#x2F;此处可以更改为你想要显示的文字</span><br><span class="line">var msgToSimplifiedChinese &#x3D; &quot;简体&quot;; &#x2F;&#x2F;同上，但两处均不建议更改</span><br><span class="line">var translateButtonId &#x3D; &quot;translateLink&quot;; &#x2F;&#x2F;默认互换id</span><br><span class="line">translateInitilization();</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
 ]]></content>
       <tags>
         <tag>主题设置 going……</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>图像测试</title>
+    <url>/2020/08/25/%E5%9B%BE%E5%83%8F%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p><img src="http://qflrz833q.hn-bkt.clouddn.com/2019-09-05-20-49-27_0.png"></p>
+]]></content>
+      <tags>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/08/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
+
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>My first BLOG</title>
+    <url>/2020/08/22/My-first-BLOG/</url>
+    <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><a id="more"></a>
+
+<h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p><strong>加粗</strong></p>
+<p><em>倾斜</em></p>
+<p><strong><em>加粗倾斜</em></strong></p>
+<p><del>删除</del></p>
+<p>==高亮==</p>
+<p>上标^上标^</p>
+<p>下标<del>下标</del></p>
+<p>==列表==</p>
+<ul>
+<li>一级列表<ul>
+<li>一级分列表<ul>
+<li>一级分分列表</li>
+<li>……</li>
+</ul>
+</li>
+<li>二级分列表</li>
+</ul>
+</li>
+<li>二级列表</li>
+<li>三级列表</li>
+</ul>
+<ol>
+<li>一级列表<ol>
+<li>一级分列表<ol>
+<li>一级分分列表</li>
+<li>……</li>
+</ol>
+</li>
+<li>二级分列表</li>
+</ol>
+</li>
+<li>二级列表</li>
+<li>三级列表</li>
+</ol>
+<p>==表格==</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>==引用==</p>
+<blockquote>
+<p>一级引用</p>
+<blockquote>
+<p>二级引用</p>
+<blockquote>
+<p>三级引用</p>
+<blockquote>
+<p>……</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>==分割线==</p>
+<hr>
+<p>==代码==</p>
+<p><code>public static viod main(String[] args)&#123;&#125;</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>==链接==</p>
+<p><a href="http://www.bilibili.com/" title="bilibili">哔哩哔哩</a></p>
+<p>==图片==</p>
+<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png" alt="图片"></p>
+<p>==脚注==</p>
+<p>待解释<a href="%E8%A7%A3%E9%87%8A%E6%96%87%E6%9C%AC">^1</a></p>
+<hr>
+<p>==缩进==</p>
+<p>缩进</p>
+<p>&emsp;缩进</p>
+<p>&ensp;缩进</p>
+<p>&nbsp;缩进</p>
+<hr>
+<p>==居中==</p>
+<div align=center>居中</div>
+
+<hr>
+<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png"></p>
+]]></content>
   </entry>
 </search>
