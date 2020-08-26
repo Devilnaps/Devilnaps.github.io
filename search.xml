@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>spring 笔记</title>
+    <url>/2020/08/25/spring-%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="一、IoC容器（控制反转，也叫DI：依赖注入）"><a href="#一、IoC容器（控制反转，也叫DI：依赖注入）" class="headerlink" title="一、IoC容器（控制反转，也叫DI：依赖注入）"></a>一、IoC容器（控制反转，也叫DI：依赖注入）</h1><h2 id="1、搭建spring环境"><a href="#1、搭建spring环境" class="headerlink" title="1、搭建spring环境"></a>1、搭建spring环境</h2><h3 id="①导包（5-1）"><a href="#①导包（5-1）" class="headerlink" title="①导包（5+1）"></a>①导包（5+1）</h3><a id="more"></a>
+
+<blockquote>
+<p>spring-aop.jar    开发<code>AOP</code>特性时需要</p>
+<p>spring-beans.jar    处理bean的jar，例如在applicationContext.xml中的<bean></bean></p>
+<p>spring-context.jar    处理上下文的jar</p>
+<p>spring-core.jar    spring的核心jar</p>
+<p>spring-expression.jar    spring表达式</p>
+</blockquote>
+<p><a href="https://maven.springframework.org/release/org/springframework/spring/">spring-framework 下载</a></p>
+<blockquote>
+<p>commons-logging.jar 日志，由第三方提供</p>
+</blockquote>
+<p><a href="https://mvnrepository.com/">推荐Maven Repository下载</a></p>
+<hr>
+<h3 id="②生成配置文件"><a href="#②生成配置文件" class="headerlink" title="②生成配置文件"></a>②生成配置文件</h3><p>工具：sts（spring tool suite）</p>
+<blockquote>
+<p>方式一：安装插件</p>
+<p>方式二：下载sts工具</p>
+</blockquote>
+<p>创建配置文件：</p>
+<blockquote>
+<p>new 一个<code>Bean Configuration File</code>文件，取名<code>applicationContext.xml</code></p>
+</blockquote>
+<img src="http://qflrz833q.hn-bkt.clouddn.com/image-20200825121122619.png" style="zoom: 33%;" />
+
+]]></content>
+      <tags>
+        <tag>spring</tag>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo-themes-Next Setting</title>
+    <url>/2020/08/25/hexo-themes-Next%20Setting/</url>
+    <content><![CDATA[<h3 id="头像设置"><a href="#头像设置" class="headerlink" title="头像设置"></a>头像设置</h3><p>【1】Config：  <strong><em>_config.xml</em></strong>（themes）</p>
+<p><code>avatar: </code></p>
+<p><code>url: /images/头像.jpg</code></p>
+<a id="more"></a>
+
+<hr>
+<h3 id="头像设置为圆形及头像旋转"><a href="#头像设置为圆形及头像旋转" class="headerlink" title="头像设置为圆形及头像旋转"></a>头像设置为圆形及头像旋转</h3><p>【1】Config ： <strong><em>\themes\next\source\css_common\outline\sidebar\sidebar-author.styl</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.site-author-image &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  padding: $site-author-image-padding;</span><br><span class="line">  max-width: $site-author-image-width;</span><br><span class="line">  height: $site-author-image-height;</span><br><span class="line">  border: site-author-image-border-width solid site-author-image-border-color;</span><br><span class="line">  &#x2F;&#x2F;头像设置为圆形</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  -webkit-border-radius: 50%;</span><br><span class="line">  -moz-border-radius: 50%;</span><br><span class="line">  transition: 1.4s all;</span><br><span class="line">&#125;</span><br><span class="line"> &#x2F;&#x2F;鼠标点击360度旋转</span><br><span class="line">.site-author-image:hover &#123;</span><br><span class="line">    -webkit-transform: rotate(360deg);</span><br><span class="line">    -moz-transform: rotate(360deg);</span><br><span class="line">    -ms-transform: rotate(360deg);</span><br><span class="line">    -transform: rotate(360deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.site-author-name &#123;</span><br><span class="line">  margin: $site-author-name-margin;</span><br><span class="line">  text-align: $site-author-name-align;</span><br><span class="line">  color: $site-author-name-color;</span><br><span class="line">  font-weight: $site-author-name-weight;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.site-description &#123;</span><br><span class="line">  margin-top: $site-description-margin-top;</span><br><span class="line">  text-align: $site-description-align;</span><br><span class="line">  font-size: $site-description-font-size;</span><br><span class="line">  color: $site-description-color;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="背景图片及透明度"><a href="#背景图片及透明度" class="headerlink" title="背景图片及透明度"></a>背景图片及透明度</h3><p>【1】Config（custom_file_path）：  <strong><em>_config.xml</em></strong>（themes）</p>
+<blockquote>
+<p> 只要取消最后一行的 #</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">custom_file_path:</span><br><span class="line">  #head: source&#x2F;_data&#x2F;head.njk</span><br><span class="line">  #header: source&#x2F;_data&#x2F;header.njk</span><br><span class="line">  #sidebar: source&#x2F;_data&#x2F;sidebar.njk</span><br><span class="line">  #postMeta: source&#x2F;_data&#x2F;post-meta.njk</span><br><span class="line">  #postBodyEnd: source&#x2F;_data&#x2F;post-body-end.njk</span><br><span class="line">  #footer: source&#x2F;_data&#x2F;footer.njk</span><br><span class="line">  #bodyEnd: source&#x2F;_data&#x2F;body-end.njk</span><br><span class="line">  #variable: source&#x2F;_data&#x2F;variables.styl</span><br><span class="line">  #mixin: source&#x2F;_data&#x2F;mixins.styl</span><br><span class="line">  style: source&#x2F;_data&#x2F;styles.styl</span><br></pre></td></tr></table></figure>
+
+<p>【2】创建 source/_data/styles.styl（此source为blog根目录下）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line"> 	background:url(&#x2F;images&#x2F;background.jpg);</span><br><span class="line"> 	background-repeat: no-repeat;</span><br><span class="line">    background-attachment:fixed;</span><br><span class="line">    background-position:50% 50%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>【3】创建source/images文件夹，用于放置背景图片（此source为blog根目录下）</p>
+<hr>
+<h3 id="动态背景"><a href="#动态背景" class="headerlink" title="动态背景"></a>动态背景</h3><p>【1】主题自带：Config <code>_config.yml</code>（themes）</p>
+<blockquote>
+<figure class="highlight plain"><figcaption><span>Canvas ribbon</span></figcaption><table><tr><td class="code"><pre><span class="line"># Canvas ribbon</span><br><span class="line"># For more information: https:&#x2F;&#x2F;github.com&#x2F;hustcc&#x2F;ribbon.js</span><br><span class="line">canvas_ribbon:</span><br><span class="line">  enable: true</span><br><span class="line">  size: 300 # The width of the ribbon</span><br><span class="line">  alpha: 0.6 # The transparency of the ribbon</span><br><span class="line">  zIndex: -1 # The display level of the ribbon</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>【2】自己添加：</p>
+<p>①在<code>\themes\next\layout\layout.njk</code>添加以下代码：</p>
+<p><code>&lt;body&gt;</code>中</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;bg_content&quot;&gt;</span><br><span class="line">  &lt;canvas id&#x3D;&quot;canvas&quot;&gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>文件末</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;dynamic_bg.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>②创建 \themes\next\source\js\dynamic_bg.js 添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var canvas &#x3D; document.getElementById(&quot;canvas&quot;);</span><br><span class="line">var ctx &#x3D; canvas.getContext(&quot;2d&quot;);</span><br><span class="line">var cw &#x3D; canvas.width &#x3D; window.innerWidth,</span><br><span class="line">  cx &#x3D; cw &#x2F; 2;</span><br><span class="line">var ch &#x3D; canvas.height &#x3D; window.innerHeight,</span><br><span class="line">  cy &#x3D; ch &#x2F; 2;</span><br><span class="line"></span><br><span class="line">ctx.fillStyle &#x3D; &quot;#000&quot;;</span><br><span class="line">var linesNum &#x3D; 16;</span><br><span class="line">var linesRy &#x3D; [];</span><br><span class="line">var requestId &#x3D; null;</span><br><span class="line"></span><br><span class="line">function Line(flag) &#123;</span><br><span class="line">  this.flag &#x3D; flag;</span><br><span class="line">  this.a &#x3D; &#123;&#125;;</span><br><span class="line">  this.b &#x3D; &#123;&#125;;</span><br><span class="line">  if (flag &#x3D;&#x3D; &quot;v&quot;) &#123;</span><br><span class="line">    this.a.y &#x3D; 0;</span><br><span class="line">    this.b.y &#x3D; ch;</span><br><span class="line">    this.a.x &#x3D; randomIntFromInterval(0, ch);</span><br><span class="line">    this.b.x &#x3D; randomIntFromInterval(0, ch);</span><br><span class="line">  &#125; else if (flag &#x3D;&#x3D; &quot;h&quot;) &#123;</span><br><span class="line">    this.a.x &#x3D; 0;</span><br><span class="line">    this.b.x &#x3D; cw;</span><br><span class="line">    this.a.y &#x3D; randomIntFromInterval(0, cw);</span><br><span class="line">    this.b.y &#x3D; randomIntFromInterval(0, cw);</span><br><span class="line">  &#125;</span><br><span class="line">  this.va &#x3D; randomIntFromInterval(25, 100) &#x2F; 100;</span><br><span class="line">  this.vb &#x3D; randomIntFromInterval(25, 100) &#x2F; 100;</span><br><span class="line"></span><br><span class="line">  this.draw &#x3D; function() &#123;</span><br><span class="line">    ctx.strokeStyle &#x3D; &quot;#ccc&quot;;</span><br><span class="line">    ctx.beginPath();</span><br><span class="line">    ctx.moveTo(this.a.x, this.a.y);</span><br><span class="line">    ctx.lineTo(this.b.x, this.b.y);</span><br><span class="line">    ctx.stroke();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  this.update &#x3D; function() &#123;</span><br><span class="line">    if (this.flag &#x3D;&#x3D; &quot;v&quot;) &#123;</span><br><span class="line">      this.a.x +&#x3D; this.va;</span><br><span class="line">      this.b.x +&#x3D; this.vb;</span><br><span class="line">    &#125; else if (flag &#x3D;&#x3D; &quot;h&quot;) &#123;</span><br><span class="line">      this.a.y +&#x3D; this.va;</span><br><span class="line">      this.b.y +&#x3D; this.vb;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    this.edges();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  this.edges &#x3D; function() &#123;</span><br><span class="line">    if (this.flag &#x3D;&#x3D; &quot;v&quot;) &#123;</span><br><span class="line">      if (this.a.x &lt; 0 || this.a.x &gt; cw) &#123;</span><br><span class="line">        this.va *&#x3D; -1;</span><br><span class="line">      &#125;</span><br><span class="line">      if (this.b.x &lt; 0 || this.b.x &gt; cw) &#123;</span><br><span class="line">        this.vb *&#x3D; -1;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; else if (flag &#x3D;&#x3D; &quot;h&quot;) &#123;</span><br><span class="line">      if (this.a.y &lt; 0 || this.a.y &gt; ch) &#123;</span><br><span class="line">        this.va *&#x3D; -1;</span><br><span class="line">      &#125;</span><br><span class="line">      if (this.b.y &lt; 0 || this.b.y &gt; ch) &#123;</span><br><span class="line">        this.vb *&#x3D; -1;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for (var i &#x3D; 0; i &lt; linesNum; i++) &#123;</span><br><span class="line">  var flag &#x3D; i % 2 &#x3D;&#x3D; 0 ? &quot;h&quot; : &quot;v&quot;;</span><br><span class="line">  var l &#x3D; new Line(flag);</span><br><span class="line">  linesRy.push(l);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Draw() &#123;</span><br><span class="line">  requestId &#x3D; window.requestAnimationFrame(Draw);</span><br><span class="line">  ctx.clearRect(0, 0, cw, ch);</span><br><span class="line"></span><br><span class="line">  for (var i &#x3D; 0; i &lt; linesRy.length; i++) &#123;</span><br><span class="line">    var l &#x3D; linesRy[i];</span><br><span class="line">    l.draw();</span><br><span class="line">    l.update();</span><br><span class="line">  &#125;</span><br><span class="line">  for (var i &#x3D; 0; i &lt; linesRy.length; i++) &#123;</span><br><span class="line">    var l &#x3D; linesRy[i];</span><br><span class="line">    for (var j &#x3D; i + 1; j &lt; linesRy.length; j++) &#123;</span><br><span class="line">      var l1 &#x3D; linesRy[j]</span><br><span class="line">      Intersect2lines(l, l1);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Init() &#123;</span><br><span class="line">  linesRy.length &#x3D; 0;</span><br><span class="line">  for (var i &#x3D; 0; i &lt; linesNum; i++) &#123;</span><br><span class="line">    var flag &#x3D; i % 2 &#x3D;&#x3D; 0 ? &quot;h&quot; : &quot;v&quot;;</span><br><span class="line">    var l &#x3D; new Line(flag);</span><br><span class="line">    linesRy.push(l);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (requestId) &#123;</span><br><span class="line">    window.cancelAnimationFrame(requestId);</span><br><span class="line">    requestId &#x3D; null;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  cw &#x3D; canvas.width &#x3D; window.innerWidth,</span><br><span class="line">    cx &#x3D; cw &#x2F; 2;</span><br><span class="line">  ch &#x3D; canvas.height &#x3D; window.innerHeight,</span><br><span class="line">    cy &#x3D; ch &#x2F; 2;</span><br><span class="line"></span><br><span class="line">  Draw();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">setTimeout(function() &#123;</span><br><span class="line">  Init();</span><br><span class="line"></span><br><span class="line">  addEventListener(&#39;resize&#39;, Init, false);</span><br><span class="line">&#125;, 15);</span><br><span class="line"></span><br><span class="line">function Intersect2lines(l1, l2) &#123;</span><br><span class="line">  var p1 &#x3D; l1.a,</span><br><span class="line">    p2 &#x3D; l1.b,</span><br><span class="line">    p3 &#x3D; l2.a,</span><br><span class="line">    p4 &#x3D; l2.b;</span><br><span class="line">  var denominator &#x3D; (p4.y - p3.y) * (p2.x - p1.x) - (p4.x - p3.x) * (p2.y - p1.y);</span><br><span class="line">  var ua &#x3D; ((p4.x - p3.x) * (p1.y - p3.y) - (p4.y - p3.y) * (p1.x - p3.x)) &#x2F; denominator;</span><br><span class="line">  var ub &#x3D; ((p2.x - p1.x) * (p1.y - p3.y) - (p2.y - p1.y) * (p1.x - p3.x)) &#x2F; denominator;</span><br><span class="line">  var x &#x3D; p1.x + ua * (p2.x - p1.x);</span><br><span class="line">  var y &#x3D; p1.y + ua * (p2.y - p1.y);</span><br><span class="line">  if (ua &gt; 0 &amp;&amp; ub &gt; 0) &#123;</span><br><span class="line">    markPoint(&#123;</span><br><span class="line">      x: x,</span><br><span class="line">      y: y</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function markPoint(p) &#123;</span><br><span class="line">  ctx.beginPath();</span><br><span class="line">  ctx.arc(p.x, p.y, 2, 0, 2 * Math.PI);</span><br><span class="line">  ctx.fill();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function randomIntFromInterval(mn, mx) &#123;</span><br><span class="line">  return ~~(Math.random() * (mx - mn + 1) + mn);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="增加卡通人物"><a href="#增加卡通人物" class="headerlink" title="增加卡通人物"></a>增加卡通人物</h3><p>【1】Installation</p>
+<p><code>npm install --save hexo-helper-live2d</code></p>
+<p>【2】Models</p>
+<p><code>npm install &#123;packagename&#125;</code></p>
+<blockquote>
+<p> {packagename} ==</p>
+<ul>
+<li><code>live2d-widget-model-chitose</code></li>
+<li><code>live2d-widget-model-epsilon2_1</code></li>
+<li><code>live2d-widget-model-gf</code></li>
+<li><code>live2d-widget-model-haru/01</code> (use <code>npm install --save live2d-widget-model-haru</code>)</li>
+<li><code>live2d-widget-model-haru/02</code> (use <code>npm install --save live2d-widget-model-haru</code>)</li>
+<li><code>live2d-widget-model-haruto</code></li>
+<li><code>live2d-widget-model-hibiki</code></li>
+<li><code>live2d-widget-model-hijiki</code></li>
+<li><code>live2d-widget-model-izumi</code></li>
+<li><code>live2d-widget-model-koharu</code></li>
+<li><code>live2d-widget-model-miku</code></li>
+<li><code>live2d-widget-model-ni-j</code></li>
+<li><code>live2d-widget-model-nico</code></li>
+<li><code>live2d-widget-model-nietzsche</code></li>
+<li><code>live2d-widget-model-nipsilon</code></li>
+<li><code>live2d-widget-model-nito</code></li>
+<li><code>live2d-widget-model-shizuku</code></li>
+<li><code>live2d-widget-model-tororo</code></li>
+<li><code>live2d-widget-model-tsumiki</code></li>
+<li><code>live2d-widget-model-unitychan</code></li>
+<li><code>live2d-widget-model-wanko</code></li>
+<li><code>live2d-widget-model-z16</code></li>
+</ul>
+</blockquote>
+<p>【3】Config  <strong><em>_config.xml</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: false</span><br><span class="line">  log: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-wanko</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br><span class="line">  react:</span><br><span class="line">    opacity: 0.7</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="自定义鼠标样式"><a href="#自定义鼠标样式" class="headerlink" title="自定义鼠标样式"></a>自定义鼠标样式</h3><hr>
+<h3 id="鼠标点击出现爱心"><a href="#鼠标点击出现爱心" class="headerlink" title="鼠标点击出现爱心"></a>鼠标点击出现爱心</h3><p>【1】创建 themes\next\source\js\love.js ，添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 500%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e&#x3D;0;e&lt;d.length;e++)d[e].alpha&lt;&#x3D;0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+&#x3D;.004,d[e].alpha-&#x3D;.013,d[e].el.style.cssText&#x3D;&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t&#x3D;&quot;function&quot;&#x3D;&#x3D;typeof e.onclick&amp;&amp;e.onclick;e.onclick&#x3D;function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a&#x3D;t.createElement(&quot;div&quot;);a.className&#x3D;&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a&#x3D;t.createElement(&quot;style&quot;);a.type&#x3D;&quot;text&#x2F;css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText&#x3D;e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d&#x3D;[];e.requestAnimationFrame&#x3D;function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3&#x2F;60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>【2】在 themes\next\layout\layout.njk 文件中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;love.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="鼠标点击显示字体"><a href="#鼠标点击显示字体" class="headerlink" title="鼠标点击显示字体"></a>鼠标点击显示字体</h3><p>【1】创建 themes\next\source\js\text.js ，添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var a_idx &#x3D; 0;</span><br><span class="line">jQuery(document).ready(function($) &#123;</span><br><span class="line">    $(&quot;body&quot;).click(function(e) &#123;</span><br><span class="line">        var a &#x3D; new Array</span><br><span class="line">        (&quot;富强&quot;, &quot;民主&quot;, &quot;文明&quot;, &quot;和谐&quot;, &quot;自由&quot;, &quot;平等&quot;, &quot;公正&quot;, &quot;法治&quot;, &quot;爱国&quot;, &quot;敬业&quot;, &quot;诚信&quot;, &quot;友善&quot;);</span><br><span class="line">        var $i &#x3D; $(&quot;&lt;span&#x2F;&gt;&quot;).text(a[a_idx]);</span><br><span class="line">        a_idx &#x3D; (a_idx + 1) % a.length;</span><br><span class="line">        var x &#x3D; e.pageX,</span><br><span class="line">        y &#x3D; e.pageY;</span><br><span class="line">        $i.css(&#123;</span><br><span class="line">            &quot;z-index&quot;: 5,</span><br><span class="line">            &quot;top&quot;: y - 20,</span><br><span class="line">            &quot;left&quot;: x,</span><br><span class="line">            &quot;position&quot;: &quot;absolute&quot;,</span><br><span class="line">            &quot;font-weight&quot;: &quot;bold&quot;,</span><br><span class="line">            &quot;color&quot;: &quot;#FF0000&quot;</span><br><span class="line">        &#125;);</span><br><span class="line">        $(&quot;body&quot;).append($i);</span><br><span class="line">        $i.animate(&#123;</span><br><span class="line">            &quot;top&quot;: y - 180,</span><br><span class="line">            &quot;opacity&quot;: 0</span><br><span class="line">        &#125;,</span><br><span class="line">      3000,</span><br><span class="line">      function() &#123;</span><br><span class="line">          $i.remove();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">    setTimeout(&#39;delay()&#39;, 2000);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">function delay() &#123;</span><br><span class="line">    $(&quot;.buryit&quot;).removeAttr(&quot;onclick&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>【2】在 themes\next\layout\layout.njk 文件中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--单击显示文字--&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;text.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="鼠标点击出现烟花效果"><a href="#鼠标点击出现烟花效果" class="headerlink" title="鼠标点击出现烟花效果"></a>鼠标点击出现烟花效果</h3><p>【1】创建 themes\next\source\js\fireworks.js ，添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;use strict&quot;;function updateCoords(e)&#123;pointerX&#x3D;(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY&#x3D;e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;function setParticuleDirection(e)&#123;var t&#x3D;anime.random(0,360)*Math.PI&#x2F;180,a&#x3D;anime.random(50,180),n&#x3D;[-1,1][anime.random(0,1)]*a;return&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;function createParticule(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;colors[anime.random(0,colors.length-1)],a.radius&#x3D;anime.random(16,32),a.endPos&#x3D;setParticuleDirection(a),a.draw&#x3D;function()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle&#x3D;a.color,ctx.fill()&#125;,a&#125;function createCircle(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;&quot;#F00&quot;,a.radius&#x3D;0.1,a.alpha&#x3D;0.5,a.lineWidth&#x3D;6,a.draw&#x3D;function()&#123;ctx.globalAlpha&#x3D;a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth&#x3D;a.lineWidth,ctx.strokeStyle&#x3D;a.color,ctx.stroke(),ctx.globalAlpha&#x3D;1&#125;,a&#125;function renderParticule(e)&#123;for(var t&#x3D;0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;function animateParticules(e,t)&#123;for(var a&#x3D;createCircle(e,t),n&#x3D;[],i&#x3D;0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:function(e)&#123;return e.endPos.x&#125;,y:function(e)&#123;return e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:&quot;linear&quot;,duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule,offset:0&#125;)&#125;function debounce(e,t)&#123;var a;return function()&#123;var n&#x3D;this,i&#x3D;arguments;clearTimeout(a),a&#x3D;setTimeout(function()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var canvasEl&#x3D;document.querySelector(&quot;.fireworks&quot;);if(canvasEl)&#123;var ctx&#x3D;canvasEl.getContext(&quot;2d&quot;),numberOfParticules&#x3D;30,pointerX&#x3D;0,pointerY&#x3D;0,tap&#x3D;&quot;mousedown&quot;,colors&#x3D;[&quot;#FF1461&quot;,&quot;#18FF92&quot;,&quot;#5A87FF&quot;,&quot;#FBF38C&quot;],setCanvasSize&#x3D;debounce(function()&#123;canvasEl.width&#x3D;2*window.innerWidth,canvasEl.height&#x3D;2*window.innerHeight,canvasEl.style.width&#x3D;window.innerWidth+&quot;px&quot;,canvasEl.style.height&#x3D;window.innerHeight+&quot;px&quot;,canvasEl.getContext(&quot;2d&quot;).scale(2,2)&#125;,500),render&#x3D;anime(&#123;duration:1&#x2F;0,update:function()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,function(e)&#123;&quot;sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;toggle-sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;A&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;&quot;IMG&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener(&quot;resize&quot;,setCanvasSize,!1)&#125;&quot;use strict&quot;;function updateCoords(e)&#123;pointerX&#x3D;(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY&#x3D;e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;function setParticuleDirection(e)&#123;var t&#x3D;anime.random(0,360)*Math.PI&#x2F;180,a&#x3D;anime.random(50,180),n&#x3D;[-1,1][anime.random(0,1)]*a;return&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;function createParticule(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;colors[anime.random(0,colors.length-1)],a.radius&#x3D;anime.random(16,32),a.endPos&#x3D;setParticuleDirection(a),a.draw&#x3D;function()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle&#x3D;a.color,ctx.fill()&#125;,a&#125;function createCircle(e,t)&#123;var a&#x3D;&#123;&#125;;return a.x&#x3D;e,a.y&#x3D;t,a.color&#x3D;&quot;#F00&quot;,a.radius&#x3D;0.1,a.alpha&#x3D;0.5,a.lineWidth&#x3D;6,a.draw&#x3D;function()&#123;ctx.globalAlpha&#x3D;a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth&#x3D;a.lineWidth,ctx.strokeStyle&#x3D;a.color,ctx.stroke(),ctx.globalAlpha&#x3D;1&#125;,a&#125;function renderParticule(e)&#123;for(var t&#x3D;0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;function animateParticules(e,t)&#123;for(var a&#x3D;createCircle(e,t),n&#x3D;[],i&#x3D;0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:function(e)&#123;return e.endPos.x&#125;,y:function(e)&#123;return e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:&quot;linear&quot;,duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule,offset:0&#125;)&#125;function debounce(e,t)&#123;var a;return function()&#123;var n&#x3D;this,i&#x3D;arguments;clearTimeout(a),a&#x3D;setTimeout(function()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var canvasEl&#x3D;document.querySelector(&quot;.fireworks&quot;);if(canvasEl)&#123;var ctx&#x3D;canvasEl.getContext(&quot;2d&quot;),numberOfParticules&#x3D;30,pointerX&#x3D;0,pointerY&#x3D;0,tap&#x3D;&quot;mousedown&quot;,colors&#x3D;[&quot;#FF1461&quot;,&quot;#18FF92&quot;,&quot;#5A87FF&quot;,&quot;#FBF38C&quot;],setCanvasSize&#x3D;debounce(function()&#123;canvasEl.width&#x3D;2*window.innerWidth,canvasEl.height&#x3D;2*window.innerHeight,canvasEl.style.width&#x3D;window.innerWidth+&quot;px&quot;,canvasEl.style.height&#x3D;window.innerHeight+&quot;px&quot;,canvasEl.getContext(&quot;2d&quot;).scale(2,2)&#125;,500),render&#x3D;anime(&#123;duration:1&#x2F;0,update:function()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,function(e)&#123;&quot;sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;toggle-sidebar&quot;!&#x3D;&#x3D;e.target.id&amp;&amp;&quot;A&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;&quot;IMG&quot;!&#x3D;&#x3D;e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener(&quot;resize&quot;,setCanvasSize,!1)&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>【2】在 themes\next\layout\layout.njk 文件中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt; </span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt; </span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h3 id="增加背景音乐"><a href="#增加背景音乐" class="headerlink" title="增加背景音乐"></a>增加背景音乐</h3><p>【1】选择<a href="https://music.163.com/#">音乐</a>，生成外链</p>
+<img src="http://qflrz833q.hn-bkt.clouddn.com/Snipaste_2020-08-25_21-30-01.png" style="zoom: 50%;" />
+
+<p>【2】复制代码</p>
+<img src="http://qflrz833q.hn-bkt.clouddn.com/Snipaste_2020-08-25_21-31-28.png" style="zoom:50%;" />
+
+<p>【3】增加到相对应的位置（比如：themes\next\layout_macro\sidebar.njk）</p>
+<hr>
+<h3 id="增加背景音乐（aplayer）"><a href="#增加背景音乐（aplayer）" class="headerlink" title="增加背景音乐（aplayer）"></a>增加背景音乐（aplayer）</h3><p>【1】下载<a href="https://github.com/MoePlayer/APlayer">aplayer</a>,解压后将<code>disk</code>文件夹复制到 \themes\next\source 中</p>
+<p>【2】创建 \themes\next\source\dist\music.js ,添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;aplayer&#39;),</span><br><span class="line">    autoplay: false,</span><br><span class="line">    loop: &#39;all&#39;,</span><br><span class="line">    volume: 0.7,</span><br><span class="line">    listFolded: true,</span><br><span class="line">    listMaxHeight: 60,</span><br><span class="line">    audio: [</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name1&#39;,</span><br><span class="line">            artist: &#39;artist1&#39;,</span><br><span class="line">            url: &#39;url1.mp3&#39;,</span><br><span class="line">            cover: &#39;cover1.jpg&#39;,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name2&#39;,</span><br><span class="line">            artist: &#39;artist2&#39;,</span><br><span class="line">            url: &#39;url2.mp3&#39;,</span><br><span class="line">            cover: &#39;cover2.jpg&#39;,</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>【3】配置：</p>
+<ul>
+<li>普通模式代码</li>
+<li>播放列表模式代码</li>
+<li>吸底模式代码</li>
+<li>迷你模式代码</li>
+</ul>
+<blockquote>
+<p>参考<a href="%5Bhttps://blog.yleao.com/2018/0902/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A8.html#%E4%B8%8B%E8%BD%BDaplayer%5D(https://blog.yleao.com/2018/0902/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A8.html#%E4%B8%8B%E8%BD%BDaplayer)">blog</a> </p>
+<p><a href="https://aplayer.js.org/#/zh-Hans/">中文文档</a></p>
+</blockquote>
+<p>【4】参数解释：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;aplayer&#39;), &#x2F;&#x2F;播放器容器元素</span><br><span class="line">    mini: false, &#x2F;&#x2F;迷你模式</span><br><span class="line">    autoplay: false, &#x2F;&#x2F;自动播放</span><br><span class="line">    theme: &#39;#FADFA3&#39;, &#x2F;&#x2F;主题色</span><br><span class="line">    loop: &#39;all&#39;, &#x2F;&#x2F;音频循环播放, 可选值: &#39;all&#39;全部循环, &#39;one&#39;单曲循环, &#39;none&#39;不循环</span><br><span class="line">    order: &#39;random&#39;, &#x2F;&#x2F;音频循环顺序, 可选值: &#39;list&#39;列表循环, &#39;random&#39;随机循环</span><br><span class="line">    preload: &#39;auto&#39;, &#x2F;&#x2F;预加载，可选值: &#39;none&#39;, &#39;metadata&#39;, &#39;auto&#39;</span><br><span class="line">    volume: 0.7, &#x2F;&#x2F;默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span><br><span class="line">    mutex: true, &#x2F;&#x2F;互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器</span><br><span class="line">    listFolded: false, &#x2F;&#x2F;列表默认折叠</span><br><span class="line">    listMaxHeight: 90, &#x2F;&#x2F;列表最大高度</span><br><span class="line">    lrcType: 3, &#x2F;&#x2F;歌词传递方式</span><br><span class="line">    audio: [ &#x2F;&#x2F;音频信息,包含以下</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name1&#39;, &#x2F;&#x2F;音频名称</span><br><span class="line">            artist: &#39;artist1&#39;, &#x2F;&#x2F;音频艺术家</span><br><span class="line">            url: &#39;url1.mp3&#39;, &#x2F;&#x2F;音频外链</span><br><span class="line">            cover: &#39;cover1.jpg&#39;, &#x2F;&#x2F;音频封面</span><br><span class="line">            lrc: &#39;lrc1.lrc&#39;, &#x2F;&#x2F;音频歌词，配合上面的lrcType使用</span><br><span class="line">            theme: &#39;#ebd0c2&#39; &#x2F;&#x2F;切换到此音频时的主题色，比上面的 theme 优先级高</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name2&#39;, &#x2F;&#x2F;如果只有一首歌，删掉这一块，如有更多歌曲按此格式逐渐往下添加</span><br><span class="line">            artist: &#39;artist2&#39;,</span><br><span class="line">            url: &#39;url2.mp3&#39;,</span><br><span class="line">            cover: &#39;cover2.jpg&#39;,</span><br><span class="line">            lrc: &#39;lrc2.lrc&#39;,</span><br><span class="line">            theme: &#39;#46718b&#39;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>【5】部署：放置在自己想的位置（比如：\themes\next\layout_macro\sidebar.njk）</p>
+<hr>
+<h3 id="添加博客运行时间"><a href="#添加博客运行时间" class="headerlink" title="添加博客运行时间"></a>添加博客运行时间</h3><p>【1】在 \themes\next\layout_partials\footer.njk 下添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;timeDate&quot;&gt;载入天数...&lt;&#x2F;span&gt;&lt;span id&#x3D;&quot;times&quot;&gt;载入时分秒...&lt;&#x2F;span&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var now &#x3D; new Date(); </span><br><span class="line">    function createtime() &#123; </span><br><span class="line">        var grt&#x3D; new Date(&quot;08&#x2F;10&#x2F;2018 17:38:00&quot;);&#x2F;&#x2F;在此处修改你的建站时间，格式：月&#x2F;日&#x2F;年 时:分:秒</span><br><span class="line">        now.setTime(now.getTime()+250); </span><br><span class="line">        days &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 &#x2F; 24; dnum &#x3D; Math.floor(days); </span><br><span class="line">        hours &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 - (24 * dnum); hnum &#x3D; Math.floor(hours); </span><br><span class="line">        if(String(hnum).length &#x3D;&#x3D;1 )&#123;hnum &#x3D; &quot;0&quot; + hnum;&#125; minutes &#x3D; (now - grt ) &#x2F; 1000 &#x2F;60 - (24 * 60 * dnum) - (60 * hnum); </span><br><span class="line">        mnum &#x3D; Math.floor(minutes); if(String(mnum).length &#x3D;&#x3D;1 )&#123;mnum &#x3D; &quot;0&quot; + mnum;&#125; </span><br><span class="line">        seconds &#x3D; (now - grt ) &#x2F; 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); </span><br><span class="line">        snum &#x3D; Math.round(seconds); if(String(snum).length &#x3D;&#x3D;1 )&#123;snum &#x3D; &quot;0&quot; + snum;&#125; </span><br><span class="line">        document.getElementById(&quot;timeDate&quot;).innerHTML &#x3D; &quot;本站已安全运行 &quot;+dnum+&quot; 天 &quot;; </span><br><span class="line">        document.getElementById(&quot;times&quot;).innerHTML &#x3D; hnum + &quot; 小时 &quot; + mnum + &quot; 分 &quot; + snum + &quot; 秒&quot;; </span><br><span class="line">    &#125; </span><br><span class="line">setInterval(&quot;createtime()&quot;,250);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="增加动态线条效果"><a href="#增加动态线条效果" class="headerlink" title="增加动态线条效果"></a>增加动态线条效果</h3><p>【1】在 \themes\next\layout\layout.njk 添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--动态线条背景--&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;</span><br><span class="line">color&#x3D;&quot;220,220,220&quot; opacity&#x3D;&#39;0.7&#39; zIndex&#x3D;&quot;-2&quot; count&#x3D;&quot;200&quot; src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;canvas-nest.js&#x2F;1.0.0&#x2F;canvas-nest.min.js&quot;&gt;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="数字雨效果"><a href="#数字雨效果" class="headerlink" title="数字雨效果"></a>数字雨效果</h3><p>【1】创建 themes\next\source\js\DigitalRain.js ，添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">window.onload &#x3D; function()&#123;</span><br><span class="line">    &#x2F;&#x2F;获取画布对象</span><br><span class="line">    var canvas &#x3D; document.getElementById(&quot;canvas&quot;);</span><br><span class="line">    &#x2F;&#x2F;获取画布的上下文</span><br><span class="line">    var context &#x3D;canvas.getContext(&quot;2d&quot;);</span><br><span class="line">    var s &#x3D; window.screen;</span><br><span class="line">    var W &#x3D; canvas.width &#x3D; s.width;</span><br><span class="line">    var H &#x3D; canvas.height;</span><br><span class="line">    &#x2F;&#x2F;获取浏览器屏幕的宽度和高度</span><br><span class="line">    &#x2F;&#x2F;var W &#x3D; window.innerWidth;</span><br><span class="line">    &#x2F;&#x2F;var H &#x3D; window.innerHeight;</span><br><span class="line">    &#x2F;&#x2F;设置canvas的宽度和高度</span><br><span class="line">    canvas.width &#x3D; W;</span><br><span class="line">    canvas.height &#x3D; H;</span><br><span class="line">    &#x2F;&#x2F;每个文字的字体大小</span><br><span class="line">    var fontSize &#x3D; 12;</span><br><span class="line">    &#x2F;&#x2F;计算列</span><br><span class="line">    var colunms &#x3D; Math.floor(W &#x2F;fontSize);	</span><br><span class="line">    &#x2F;&#x2F;记录每列文字的y轴坐标</span><br><span class="line">    var drops &#x3D; [];</span><br><span class="line">    &#x2F;&#x2F;给每一个文字初始化一个起始点的位置</span><br><span class="line">    for(var i&#x3D;0;i&lt;colunms;i++)&#123;</span><br><span class="line">        drops.push(0);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;运动的文字</span><br><span class="line">    var str &#x3D;&quot;WELCOME TO WWW.ITRHX.COM&quot;;</span><br><span class="line">    &#x2F;&#x2F;4:fillText(str,x,y);原理就是去更改y的坐标位置</span><br><span class="line">    &#x2F;&#x2F;绘画的函数</span><br><span class="line">    function draw()&#123;</span><br><span class="line">        context.fillStyle &#x3D; &quot;rgba(238,238,238,.08)&quot;;&#x2F;&#x2F;遮盖层</span><br><span class="line">        context.fillRect(0,0,W,H);</span><br><span class="line">        &#x2F;&#x2F;给字体设置样式</span><br><span class="line">        context.font &#x3D; &quot;600 &quot;+fontSize+&quot;px  Georgia&quot;;</span><br><span class="line">        &#x2F;&#x2F;给字体添加颜色</span><br><span class="line">        context.fillStyle &#x3D; [&quot;#33B5E5&quot;, &quot;#0099CC&quot;, &quot;#AA66CC&quot;, &quot;#9933CC&quot;, &quot;#99CC00&quot;, &quot;#669900&quot;, &quot;#FFBB33&quot;, &quot;#FF8800&quot;, &quot;#FF4444&quot;, &quot;#CC0000&quot;][parseInt(Math.random() * 10)];&#x2F;&#x2F;randColor();可以rgb,hsl, 标准色，十六进制颜色</span><br><span class="line">        &#x2F;&#x2F;写入画布中</span><br><span class="line">        for(var i&#x3D;0;i&lt;colunms;i++)&#123;</span><br><span class="line">            var index &#x3D; Math.floor(Math.random() * str.length);</span><br><span class="line">            var x &#x3D; i*fontSize;</span><br><span class="line">            var y &#x3D; drops[i] *fontSize;</span><br><span class="line">            context.fillText(str[index],x,y);</span><br><span class="line">            &#x2F;&#x2F;如果要改变时间，肯定就是改变每次他的起点</span><br><span class="line">            if(y &gt;&#x3D; canvas.height &amp;&amp; Math.random() &gt; 0.99)&#123;</span><br><span class="line">                drops[i] &#x3D; 0;</span><br><span class="line">            &#125;</span><br><span class="line">            drops[i]++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    function randColor()&#123;&#x2F;&#x2F;随机颜色</span><br><span class="line">        var r &#x3D; Math.floor(Math.random() * 256);</span><br><span class="line">        var g &#x3D; Math.floor(Math.random() * 256);</span><br><span class="line">        var b &#x3D; Math.floor(Math.random() * 256);</span><br><span class="line">        return &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    draw();</span><br><span class="line">    setInterval(draw,35);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>【2】在 \themes\next\source\css\main.styl 添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">canvas &#123;</span><br><span class="line">  position: fixed;</span><br><span class="line">  right: 0px;</span><br><span class="line">  bottom: 0px;</span><br><span class="line">  min-width: 100%;</span><br><span class="line">  min-height: 100%;</span><br><span class="line">  height: auto;</span><br><span class="line">  width: auto;</span><br><span class="line">  z-index: -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>【3】在 \themes\next\layout\layout.njk 添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 数字雨 --&gt;</span><br><span class="line">&lt;canvas id&#x3D;&quot;canvas&quot; width&#x3D;&quot;1440&quot; height&#x3D;&quot;900&quot; &gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;DigitalRain.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="icon修改"><a href="#icon修改" class="headerlink" title="icon修改"></a>icon修改</h3><p>【1】Config <code>_config.yml</code>（themes）</p>
+<hr>
+<h3 id="字体修改"><a href="#字体修改" class="headerlink" title="字体修改"></a>字体修改</h3><p><a href="https://fonts.google.com/">Google Fonts</a></p>
+<p>【1】Config <code>_config.yml</code>（themes）</p>
+<hr>
+<h3 id="添加文章结束标语"><a href="#添加文章结束标语" class="headerlink" title="添加文章结束标语"></a>添加文章结束标语</h3><p>【1】创建 \themes\next\layout_macro\passage-end-tag.njk 添加代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div style&#x3D;&quot;text-align:center;color: #FA8072;font-size:10px;&quot;&gt;------------- End  &lt;i class&#x3D;&quot;fa fa-hourglass-end&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;i&gt;  Thank For Your Reading -------------&lt;&#x2F;div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其中的icon可以去<a href="http://www.fontawesome.com.cn/faicons/">Font Awesome</a>自行查找替换。字体大小修改其中的<code>font-size</code>，位置修改其中的<code>text-align</code>，颜色修改其中的<code>color</code>,可以参考<a href="https://blog.yleao.com/2018/0731/%E5%AD%97%E4%BD%93%E3%80%81%E5%AD%97%E5%8F%B7%E4%B8%8E%E9%A2%9C%E8%89%B2%E6%B5%8B%E8%AF%95.html#%E9%A2%9C%E8%89%B2%E5%88%97%E8%A1%A8">这里</a>。</p>
+<p>【2】在 \themes\next\layout_macro\post.njk 添加代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &#123;% if not is_index %&#125;</span><br><span class="line">    &#123;% include &#39;passage-end-tag.njk&#39; %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>【3】Config <code>_config.yml</code>（themes）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 文章末尾添加“本文结束”标记</span><br><span class="line">passage_end_tag:</span><br><span class="line">  enabled: true</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="tag标记的更改"><a href="#tag标记的更改" class="headerlink" title="tag标记的更改"></a>tag标记的更改</h3><p>【1】替换 \themes\next\layout_macro\post.njk 中的<code>&#123;%- set tag_indicate = '<i class="fa fa-tag"></i>' if theme.tag_icon else '#"></i>' %&#125;</code>为<code>&#123;%- set tag_indicate = '<i class="fa fa-tag"></i>' if theme.tag_icon else '<i class="fa fa-tag"></i>' %&#125;</code></p>
+<p>想使用其他图标可在<a href="http://www.fontawesome.com.cn/faicons/">Fontawesome</a>内自行查找。</p>
+<hr>
+<h3 id="给文章添加脚注"><a href="#给文章添加脚注" class="headerlink" title="给文章添加脚注"></a>给文章添加脚注</h3><p>【1】<code>npm install hexo-footnotes --save</code></p>
+<p>【2】Config <code>_config.yml</code>（hexo）增加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">plugins:</span><br><span class="line">  - hexo-footnotes</span><br></pre></td></tr></table></figure>
+
+<p>【3】安装完成后按官方<a href="https://githut.com/LouisBarranqueiro/hexo-footnotes#syntax">readme</a>的方式书写。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">basic footnote[^1]</span><br><span class="line">here is an inline footnote[^2](inline footnote)</span><br><span class="line">and another one[^3]</span><br><span class="line">and another one[^4]</span><br><span class="line"></span><br><span class="line">[^1]: basic footnote content</span><br><span class="line">[^3]: paragraph</span><br><span class="line">footnote</span><br><span class="line">content</span><br><span class="line">[^4]: footnote content with some [markdown](https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Markdown)</span><br></pre></td></tr></table></figure>
+
+<p>注脚的内容最好放在文章的最后面，否则可能会出错误。</p>
+<hr>
+<h3 id="增加本地搜索"><a href="#增加本地搜索" class="headerlink" title="增加本地搜索"></a>增加本地搜索</h3><p>【1】<code>npm install hexo-generator-searchdb --save</code></p>
+<p>【2】Config <code>_config.yml</code>（hexo）增加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: excerpt</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+<p>【3】Config <code>_config.yml</code>（themes）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="404页面"><a href="#404页面" class="headerlink" title="404页面"></a>404页面</h3><p>【1】创建 \themes\next\source\404.html 添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta http-equiv&#x3D;&quot;content-type&quot; content&#x3D;&quot;text&#x2F;html;charset&#x3D;utf-8;&quot;&#x2F;&gt;</span><br><span class="line">  &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;IE&#x3D;edge,chrome&#x3D;1&quot; &#x2F;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;robots&quot; content&#x3D;&quot;all&quot; &#x2F;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;robots&quot; content&#x3D;&quot;index,follow&quot;&#x2F;&gt;</span><br><span class="line">  &lt;link rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css&quot; href&#x3D;&quot;https:&#x2F;&#x2F;qzone.qq.com&#x2F;gy&#x2F;404&#x2F;style&#x2F;404style.css&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;script type&#x3D;&quot;text&#x2F;plain&quot; src&#x3D;&quot;http:&#x2F;&#x2F;www.qq.com&#x2F;404&#x2F;search_children.js&quot;</span><br><span class="line">          charset&#x3D;&quot;utf-8&quot; homePageUrl&#x3D;&quot;&#x2F;&quot;</span><br><span class="line">          homePageName&#x3D;&quot;回到我的主页&quot;&gt;</span><br><span class="line">  &lt;&#x2F;script&gt;</span><br><span class="line">  &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;qzone.qq.com&#x2F;gy&#x2F;404&#x2F;data.js&quot; charset&#x3D;&quot;utf-8&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;qzone.qq.com&#x2F;gy&#x2F;404&#x2F;page.js&quot; charset&#x3D;&quot;utf-8&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其中<code>homePageUrl</code>与<code>homePageName</code>可自定义。</p>
+<hr>
+<h3 id="添加置顶"><a href="#添加置顶" class="headerlink" title="添加置顶"></a>添加置顶</h3><p>【1】</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm uninstall hexo-generator-index --save</span><br><span class="line">$ npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+
+<p>【2】在文章中加入<code>top: x</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: </span><br><span class="line">tags:</span><br><span class="line">  - life</span><br><span class="line">  - music</span><br><span class="line">categories:</span><br><span class="line">  - </span><br><span class="line">abbrlink: 31015</span><br><span class="line">date: </span><br><span class="line">top: 1</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>【3】在 \themes\next\layout_macro\post.njk文件中<code>&lt;div class=&quot;post-meta-container&quot;&gt;</code>后 添加代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">    &lt;font color&#x3D;#FFFFFF&gt;&lt;b style&#x3D;&quot;background-color:#A9A9A9&quot;&gt;　Top　&lt;&#x2F;b&gt;&lt;&#x2F;font&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="加密文章"><a href="#加密文章" class="headerlink" title="加密文章"></a>加密文章</h3><p>首先<code>npm install --save hexo-blog-encrypt</code>下载插件。</p>
+<p>下好插件后将<code>password, abstract, message</code>等字段添加到要加密文章的头部，如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copy---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2020-05-02 18:00:00</span><br><span class="line">password: 设定的密码</span><br><span class="line">abstract: 该博客的摘要，会显示在博客的列表页</span><br><span class="line">message:  查看博客时，密码输入框上面的描述性文字</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+
+
+<p>最后再使用<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>在本地预览加密的文章。</p>
+<hr>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+      <tags>
+        <tag>主题设置 going……</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图像测试</title>
+    <url>/2020/08/25/%E5%9B%BE%E5%83%8F%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p><img src="http://qflrz833q.hn-bkt.clouddn.com/2019-09-05-20-49-27_0.png"></p>
+]]></content>
+      <tags>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/08/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
+
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>My first BLOG</title>
+    <url>/2020/08/22/My-first-BLOG/</url>
+    <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><a id="more"></a>
+
+<h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p><strong>加粗</strong></p>
+<p><em>倾斜</em></p>
+<p><strong><em>加粗倾斜</em></strong></p>
+<p><del>删除</del></p>
+<p>==高亮==</p>
+<p>上标^上标^</p>
+<p>下标<del>下标</del></p>
+<p>==列表==</p>
+<ul>
+<li>一级列表<ul>
+<li>一级分列表<ul>
+<li>一级分分列表</li>
+<li>……</li>
+</ul>
+</li>
+<li>二级分列表</li>
+</ul>
+</li>
+<li>二级列表</li>
+<li>三级列表</li>
+</ul>
+<ol>
+<li>一级列表<ol>
+<li>一级分列表<ol>
+<li>一级分分列表</li>
+<li>……</li>
+</ol>
+</li>
+<li>二级分列表</li>
+</ol>
+</li>
+<li>二级列表</li>
+<li>三级列表</li>
+</ol>
+<p>==表格==</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>==引用==</p>
+<blockquote>
+<p>一级引用</p>
+<blockquote>
+<p>二级引用</p>
+<blockquote>
+<p>三级引用</p>
+<blockquote>
+<p>……</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>==分割线==</p>
+<hr>
+<p>==代码==</p>
+<p><code>public static viod main(String[] args)&#123;&#125;</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>==链接==</p>
+<p><a href="http://www.bilibili.com/" title="bilibili">哔哩哔哩</a></p>
+<p>==图片==</p>
+<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png" alt="图片"></p>
+<p>==脚注==</p>
+<p>待解释<a href="%E8%A7%A3%E9%87%8A%E6%96%87%E6%9C%AC">^1</a></p>
+<hr>
+<p>==缩进==</p>
+<p>缩进</p>
+<p>&emsp;缩进</p>
+<p>&ensp;缩进</p>
+<p>&nbsp;缩进</p>
+<hr>
+<p>==居中==</p>
+<div align=center>居中</div>
+
+<hr>
+<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png"></p>
+]]></content>
+  </entry>
+</search>
