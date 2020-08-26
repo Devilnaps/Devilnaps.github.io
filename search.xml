@@ -1,6 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/08/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
+
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>My first BLOG</title>
+    <url>/2020/08/22/My-first-BLOG/</url>
+    <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><a id="more"></a>
+
+<h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p><strong>加粗</strong></p>
+<p><em>倾斜</em></p>
+<p><strong><em>加粗倾斜</em></strong></p>
+<p><del>删除</del></p>
+<p>==高亮==</p>
+<p>上标^上标^</p>
+<p>下标<del>下标</del></p>
+<p>==列表==</p>
+<ul>
+<li>一级列表<ul>
+<li>一级分列表<ul>
+<li>一级分分列表</li>
+<li>……</li>
+</ul>
+</li>
+<li>二级分列表</li>
+</ul>
+</li>
+<li>二级列表</li>
+<li>三级列表</li>
+</ul>
+<ol>
+<li>一级列表<ol>
+<li>一级分列表<ol>
+<li>一级分分列表</li>
+<li>……</li>
+</ol>
+</li>
+<li>二级分列表</li>
+</ol>
+</li>
+<li>二级列表</li>
+<li>三级列表</li>
+</ol>
+<p>==表格==</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>==引用==</p>
+<blockquote>
+<p>一级引用</p>
+<blockquote>
+<p>二级引用</p>
+<blockquote>
+<p>三级引用</p>
+<blockquote>
+<p>……</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>==分割线==</p>
+<hr>
+<p>==代码==</p>
+<p><code>public static viod main(String[] args)&#123;&#125;</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>==链接==</p>
+<p><a href="http://www.bilibili.com/" title="bilibili">哔哩哔哩</a></p>
+<p>==图片==</p>
+<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png" alt="图片"></p>
+<p>==脚注==</p>
+<p>待解释<a href="%E8%A7%A3%E9%87%8A%E6%96%87%E6%9C%AC">^1</a></p>
+<hr>
+<p>==缩进==</p>
+<p>缩进</p>
+<p>&emsp;缩进</p>
+<p>&ensp;缩进</p>
+<p>&nbsp;缩进</p>
+<hr>
+<p>==居中==</p>
+<div align=center>居中</div>
+
+<hr>
+<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>spring 笔记</title>
     <url>/2020/08/25/spring-%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="一、IoC容器（控制反转，也叫DI：依赖注入）"><a href="#一、IoC容器（控制反转，也叫DI：依赖注入）" class="headerlink" title="一、IoC容器（控制反转，也叫DI：依赖注入）"></a>一、IoC容器（控制反转，也叫DI：依赖注入）</h1><h2 id="1、搭建spring环境"><a href="#1、搭建spring环境" class="headerlink" title="1、搭建spring环境"></a>1、搭建spring环境</h2><h3 id="①导包（5-1）"><a href="#①导包（5-1）" class="headerlink" title="①导包（5+1）"></a>①导包（5+1）</h3><a id="more"></a>
@@ -33,6 +157,15 @@
       <tags>
         <tag>spring</tag>
         <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图像测试</title>
+    <url>/2020/08/25/%E5%9B%BE%E5%83%8F%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p><img src="http://qflrz833q.hn-bkt.clouddn.com/2019-09-05-20-49-27_0.png"></p>
+]]></content>
+      <tags>
+        <tag>测试</tag>
       </tags>
   </entry>
   <entry>
@@ -110,7 +243,12 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw&#x2F;</span><br><span class="line">  pluginJsPath: lib&#x2F;</span><br><span class="line">  pluginModelPath: assets&#x2F;</span><br><span class="line">  tagMode: false</span><br><span class="line">  log: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-wanko</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br><span class="line">  react:</span><br><span class="line">    opacity: 0.7</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h3 id="自定义鼠标样式"><a href="#自定义鼠标样式" class="headerlink" title="自定义鼠标样式"></a>自定义鼠标样式</h3><hr>
+<h3 id="自定义鼠标样式"><a href="#自定义鼠标样式" class="headerlink" title="自定义鼠标样式"></a>自定义鼠标样式</h3><p>【1】创建~\source_data\styles.styl 在<code>&lt;body&gt;</code>添加代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    cursor: url(https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;TRHX&#x2F;CDN-for-itrhx.com@2.1.6&#x2F;images&#x2F;mouse.cur),auto;</span><br><span class="line">    background-color: @theme_background;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>【2】鼠标样式：图片格式为.ico、.ani、.cur，建议使用.cur，如果使用.ani或者其他格式无效，原因是浏览器兼容问题，请阅读<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property">参考文档</a></p>
+<p> <a href="https://www.axialis.com/">Axialis CursorWorkshop</a> 制作样</p>
+<hr>
 <h3 id="鼠标点击出现爱心"><a href="#鼠标点击出现爱心" class="headerlink" title="鼠标点击出现爱心"></a>鼠标点击出现爱心</h3><p>【1】创建 themes\next\source\js\love.js ，添加以下代码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 500%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e&#x3D;0;e&lt;d.length;e++)d[e].alpha&lt;&#x3D;0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+&#x3D;.004,d[e].alpha-&#x3D;.013,d[e].el.style.cssText&#x3D;&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t&#x3D;&quot;function&quot;&#x3D;&#x3D;typeof e.onclick&amp;&amp;e.onclick;e.onclick&#x3D;function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a&#x3D;t.createElement(&quot;div&quot;);a.className&#x3D;&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a&#x3D;t.createElement(&quot;style&quot;);a.type&#x3D;&quot;text&#x2F;css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText&#x3D;e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d&#x3D;[];e.requestAnimationFrame&#x3D;function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3&#x2F;60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
 
@@ -240,142 +378,38 @@
 
 <p>最后再使用<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>在本地预览加密的文章。</p>
 <hr>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+<h3 id="Hitokoto"><a href="#Hitokoto" class="headerlink" title="Hitokoto"></a>Hitokoto</h3><p><a href="https://hitokoto.cn/api">点击此处 </a>访问官方  API</p>
+<p>【1】创建 ~blog\source_data\sidebar.njk 添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- none-select-br --&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;&lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- hitokoto --&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class&#x3D;&quot;hitokoto-title&quot;&gt;</span><br><span class="line">	&lt;i class&#x3D;&quot;fa fa-paragraph&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">	&lt;b&gt;一言&lt;&#x2F;b&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id&#x3D;&quot;hitokoto&quot;&gt;:D 获取中...&lt;&#x2F;div&gt;</span><br><span class="line">&lt;i id&#x3D;&quot;hitofrom&quot;&gt;:D 获取中...&lt;&#x2F;i&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;bluebird@3&#x2F;js&#x2F;browser&#x2F;bluebird.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;whatwg-fetch@2.0.3&#x2F;fetch.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  fetch(&#39;https:&#x2F;&#x2F;v1.hitokoto.cn&#39;)</span><br><span class="line">    .then(function (res)&#123;</span><br><span class="line">      return res.json();</span><br><span class="line">    &#125;)</span><br><span class="line">    .then(function (data) &#123;</span><br><span class="line">      var hitokoto &#x3D; document.getElementById(&#39;hitokoto&#39;);</span><br><span class="line">      hitokoto.innerText &#x3D; &#39;\xa0\xa0\xa0\xa0\xa0\xa0\xa0&#39; + data.hitokoto;</span><br><span class="line">      var hitofrom &#x3D; document.getElementById(&#39;hitofrom&#39;);</span><br><span class="line">      hitofrom.innerText &#x3D; &quot;——&quot; + data.from + &#39;\xa0&#39;; </span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(function (err) &#123;</span><br><span class="line">      console.error(err);</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>【2】在~blog\source_data\styles.styl 添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;hitokoto</span><br><span class="line"></span><br><span class="line">.hitokoto-title &#123;</span><br><span class="line">  text-align: center;</span><br><span class="line">  font-size: 12px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#hitokoto &#123;</span><br><span class="line">  text-align: left;</span><br><span class="line">  font-family: &quot;Microsoft YaHei&quot;;</span><br><span class="line">  font-size: 11px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#hitofrom &#123;</span><br><span class="line">  float: right;</span><br><span class="line">  font-family: &quot;Microsoft YaHei&quot;;</span><br><span class="line">  font-size: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>【3】Config <code>_congig.yml</code> （themes）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">custom_file_path:</span><br><span class="line">  #head: source&#x2F;_data&#x2F;head.njk</span><br><span class="line">  #header: source&#x2F;_data&#x2F;header.njk</span><br><span class="line">  sidebar: source&#x2F;_data&#x2F;sidebar.njk</span><br><span class="line">  #postMeta: source&#x2F;_data&#x2F;post-meta.njk</span><br><span class="line">  #postBodyEnd: source&#x2F;_data&#x2F;post-body-end.njk</span><br><span class="line">  #footer: source&#x2F;_data&#x2F;footer.njk</span><br><span class="line">  #bodyEnd: source&#x2F;_data&#x2F;body-end.njk</span><br><span class="line">  #variable: source&#x2F;_data&#x2F;variables.styl</span><br><span class="line">  #mixin: source&#x2F;_data&#x2F;mixins.styl</span><br><span class="line">  style: source&#x2F;_data&#x2F;styles.styl</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="代码折叠"><a href="#代码折叠" class="headerlink" title="代码折叠"></a>代码折叠</h3><p>【1】创建 blog\scripts\tags\fold_tag.js 添加代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;* global hexo *&#x2F;</span><br><span class="line">&#x2F;&#x2F; Usage: &#123;% fold 点击显&#x2F;隐内容 %&#125; Something &#123;% endfold %&#125;</span><br><span class="line">function fold (args, content) &#123;</span><br><span class="line">  var text &#x3D; args[0];</span><br><span class="line">  if(!text) text &#x3D; &quot;点击显&#x2F;隐&quot;;</span><br><span class="line">  return &#39;&lt;div&gt;&lt;div class&#x3D;&quot;fold_hider&quot;&gt;&lt;div class&#x3D;&quot;close hider_title&quot;&gt;&#39; + text + &#39;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;&lt;div class&#x3D;&quot;fold&quot;&gt;\n&#39; + hexo.render.renderSync(&#123;text: content, engine: &#39;markdown&#39;&#125;) + &#39;\n&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;&#39;;</span><br><span class="line">&#125;</span><br><span class="line">hexo.extend.tag.register(&#39;fold&#39;, fold, &#123;ends: true&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>【2】创建 blog\source\js\fold_action.js 添加代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$(document).ready(function()&#123;</span><br><span class="line">    $(document).on(&#39;click&#39;, &#39;.fold_hider&#39;, function()&#123;</span><br><span class="line">        $(&#39;&gt;.fold&#39;, this.parentNode).slideToggle();</span><br><span class="line">        $(&#39;&gt;:first&#39;, this).toggleClass(&#39;open&#39;);</span><br><span class="line">    &#125;);</span><br><span class="line">    &#x2F;&#x2F;默认情况下折叠</span><br><span class="line">    $(&quot;div.fold&quot;).css(&quot;display&quot;,&quot;none&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>【3】创建 blog\source_data\body-end.njk 添加代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;# 代码压缩 #&#125;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;fold_action.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>【4】在 blog\source_data\style.styl 添加样式：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 代码折叠功能添加</span><br><span class="line">.hider_title&#123;</span><br><span class="line">    cursor: pointer;</span><br><span class="line">    color: #ef4a05;</span><br><span class="line">&#125;</span><br><span class="line">.close:before&#123;</span><br><span class="line">    content: &quot;▼&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.open:before&#123;</span><br><span class="line">    content: &quot;▲&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<div><div class="fold_hider"><div class="close hider_title">【5】使用</div></div><div class="fold">
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% fold 点击显&#x2F;隐内容 %&#125;</span><br><span class="line">something you want to fold, include code block.</span><br><span class="line">&#123;% endfold %&#125;</span><br></pre></td></tr></table></figure>
+
+</div></div>
+
+<hr>
+]]></content>
       <tags>
         <tag>主题设置 going……</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>图像测试</title>
-    <url>/2020/08/25/%E5%9B%BE%E5%83%8F%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p><img src="http://qflrz833q.hn-bkt.clouddn.com/2019-09-05-20-49-27_0.png"></p>
-]]></content>
-      <tags>
-        <tag>测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/08/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
-
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>My first BLOG</title>
-    <url>/2020/08/22/My-first-BLOG/</url>
-    <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><a id="more"></a>
-
-<h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p><strong>加粗</strong></p>
-<p><em>倾斜</em></p>
-<p><strong><em>加粗倾斜</em></strong></p>
-<p><del>删除</del></p>
-<p>==高亮==</p>
-<p>上标^上标^</p>
-<p>下标<del>下标</del></p>
-<p>==列表==</p>
-<ul>
-<li>一级列表<ul>
-<li>一级分列表<ul>
-<li>一级分分列表</li>
-<li>……</li>
-</ul>
-</li>
-<li>二级分列表</li>
-</ul>
-</li>
-<li>二级列表</li>
-<li>三级列表</li>
-</ul>
-<ol>
-<li>一级列表<ol>
-<li>一级分列表<ol>
-<li>一级分分列表</li>
-<li>……</li>
-</ol>
-</li>
-<li>二级分列表</li>
-</ol>
-</li>
-<li>二级列表</li>
-<li>三级列表</li>
-</ol>
-<p>==表格==</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>==引用==</p>
-<blockquote>
-<p>一级引用</p>
-<blockquote>
-<p>二级引用</p>
-<blockquote>
-<p>三级引用</p>
-<blockquote>
-<p>……</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>==分割线==</p>
-<hr>
-<p>==代码==</p>
-<p><code>public static viod main(String[] args)&#123;&#125;</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>==链接==</p>
-<p><a href="http://www.bilibili.com/" title="bilibili">哔哩哔哩</a></p>
-<p>==图片==</p>
-<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png" alt="图片"></p>
-<p>==脚注==</p>
-<p>待解释<a href="%E8%A7%A3%E9%87%8A%E6%96%87%E6%9C%AC">^1</a></p>
-<hr>
-<p>==缩进==</p>
-<p>缩进</p>
-<p>&emsp;缩进</p>
-<p>&ensp;缩进</p>
-<p>&nbsp;缩进</p>
-<hr>
-<p>==居中==</p>
-<div align=center>居中</div>
-
-<hr>
-<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png"></p>
-]]></content>
   </entry>
 </search>
