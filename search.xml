@@ -1,130 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>My first BLOG</title>
-    <url>/2020/08/22/My-first-BLOG/</url>
-    <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><a id="more"></a>
-
-<h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p><strong>加粗</strong></p>
-<p><em>倾斜</em></p>
-<p><strong><em>加粗倾斜</em></strong></p>
-<p><del>删除</del></p>
-<p>==高亮==</p>
-<p>上标^上标^</p>
-<p>下标<del>下标</del></p>
-<p>==列表==</p>
-<ul>
-<li>一级列表<ul>
-<li>一级分列表<ul>
-<li>一级分分列表</li>
-<li>……</li>
-</ul>
-</li>
-<li>二级分列表</li>
-</ul>
-</li>
-<li>二级列表</li>
-<li>三级列表</li>
-</ul>
-<ol>
-<li>一级列表<ol>
-<li>一级分列表<ol>
-<li>一级分分列表</li>
-<li>……</li>
-</ol>
-</li>
-<li>二级分列表</li>
-</ol>
-</li>
-<li>二级列表</li>
-<li>三级列表</li>
-</ol>
-<p>==表格==</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>==引用==</p>
-<blockquote>
-<p>一级引用</p>
-<blockquote>
-<p>二级引用</p>
-<blockquote>
-<p>三级引用</p>
-<blockquote>
-<p>……</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>==分割线==</p>
-<hr>
-<p>==代码==</p>
-<p><code>public static viod main(String[] args)&#123;&#125;</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>==链接==</p>
-<p><a href="http://www.bilibili.com/" title="bilibili">哔哩哔哩</a></p>
-<p>==图片==</p>
-<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png" alt="图片"></p>
-<p>==脚注==</p>
-<p>待解释<a href="%E8%A7%A3%E9%87%8A%E6%96%87%E6%9C%AC">^1</a></p>
-<hr>
-<p>==缩进==</p>
-<p>缩进</p>
-<p>&emsp;缩进</p>
-<p>&ensp;缩进</p>
-<p>&nbsp;缩进</p>
-<hr>
-<p>==居中==</p>
-<div align=center>居中</div>
-
-<hr>
-<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/08/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
-
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>spring 笔记</title>
     <url>/2020/08/25/spring-%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="一、IoC容器（控制反转，也叫DI：依赖注入）"><a href="#一、IoC容器（控制反转，也叫DI：依赖注入）" class="headerlink" title="一、IoC容器（控制反转，也叫DI：依赖注入）"></a>一、IoC容器（控制反转，也叫DI：依赖注入）</h1><h2 id="1、搭建spring环境"><a href="#1、搭建spring环境" class="headerlink" title="1、搭建spring环境"></a>1、搭建spring环境</h2><h3 id="①导包（5-1）"><a href="#①导包（5-1）" class="headerlink" title="①导包（5+1）"></a>①导包（5+1）</h3><a id="more"></a>
@@ -157,15 +33,6 @@
       <tags>
         <tag>spring</tag>
         <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图像测试</title>
-    <url>/2020/08/25/%E5%9B%BE%E5%83%8F%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p><img src="http://qflrz833q.hn-bkt.clouddn.com/2019-09-05-20-49-27_0.png"></p>
-]]></content>
-      <tags>
-        <tag>测试</tag>
       </tags>
   </entry>
   <entry>
@@ -377,5 +244,138 @@
       <tags>
         <tag>主题设置 going……</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>图像测试</title>
+    <url>/2020/08/25/%E5%9B%BE%E5%83%8F%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p><img src="http://qflrz833q.hn-bkt.clouddn.com/2019-09-05-20-49-27_0.png"></p>
+]]></content>
+      <tags>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/08/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
+
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>My first BLOG</title>
+    <url>/2020/08/22/My-first-BLOG/</url>
+    <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><a id="more"></a>
+
+<h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p><strong>加粗</strong></p>
+<p><em>倾斜</em></p>
+<p><strong><em>加粗倾斜</em></strong></p>
+<p><del>删除</del></p>
+<p>==高亮==</p>
+<p>上标^上标^</p>
+<p>下标<del>下标</del></p>
+<p>==列表==</p>
+<ul>
+<li>一级列表<ul>
+<li>一级分列表<ul>
+<li>一级分分列表</li>
+<li>……</li>
+</ul>
+</li>
+<li>二级分列表</li>
+</ul>
+</li>
+<li>二级列表</li>
+<li>三级列表</li>
+</ul>
+<ol>
+<li>一级列表<ol>
+<li>一级分列表<ol>
+<li>一级分分列表</li>
+<li>……</li>
+</ol>
+</li>
+<li>二级分列表</li>
+</ol>
+</li>
+<li>二级列表</li>
+<li>三级列表</li>
+</ol>
+<p>==表格==</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>==引用==</p>
+<blockquote>
+<p>一级引用</p>
+<blockquote>
+<p>二级引用</p>
+<blockquote>
+<p>三级引用</p>
+<blockquote>
+<p>……</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>==分割线==</p>
+<hr>
+<p>==代码==</p>
+<p><code>public static viod main(String[] args)&#123;&#125;</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>==链接==</p>
+<p><a href="http://www.bilibili.com/" title="bilibili">哔哩哔哩</a></p>
+<p>==图片==</p>
+<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png" alt="图片"></p>
+<p>==脚注==</p>
+<p>待解释<a href="%E8%A7%A3%E9%87%8A%E6%96%87%E6%9C%AC">^1</a></p>
+<hr>
+<p>==缩进==</p>
+<p>缩进</p>
+<p>&emsp;缩进</p>
+<p>&ensp;缩进</p>
+<p>&nbsp;缩进</p>
+<hr>
+<p>==居中==</p>
+<div align=center>居中</div>
+
+<hr>
+<p><img src="My-first-BLOG.assets/2019-09-05-20-49-27_0.png"></p>
+]]></content>
   </entry>
 </search>
