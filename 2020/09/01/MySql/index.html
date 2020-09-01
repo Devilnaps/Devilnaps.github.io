@@ -24,31 +24,52 @@
   </script>
 
 
-  <meta name="description" content="一个旅人">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Z&#39; B">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="一、数据库1.1、database（DB）：数据库：按照数据结构来组织，存储和管理数据的仓库。 Database Management System （DBMS）：对数据进行管理的软件系统 1.2、近年数据库使用情况：DB-ENGINES     1.3、MySql是一个开源的关系型数据库管理系统。 1.4、安装：MySQL Community Downloads 配置密码等 添加环境变量：安装目">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySql">
+<meta property="og:url" content="http://yoursite.com/2020/09/01/MySql/index.html">
 <meta property="og:site_name" content="Z&#39; B">
-<meta property="og:description" content="一个旅人">
+<meta property="og:description" content="一、数据库1.1、database（DB）：数据库：按照数据结构来组织，存储和管理数据的仓库。 Database Management System （DBMS）：对数据进行管理的软件系统 1.2、近年数据库使用情况：DB-ENGINES     1.3、MySql是一个开源的关系型数据库管理系统。 1.4、安装：MySQL Community Downloads 配置密码等 添加环境变量：安装目">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200901084149.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200901084617.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/296ba508f1a01dc54f3a49a93f38038624fa1315/img/20200901112230.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200901112544.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200901112840.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200901113547.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200901170130.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200901170338.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200901170631.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200901183752.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200901225353.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200902002951.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200902003814.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200902004130.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200902004420.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200902004643.png">
+<meta property="article:published_time" content="2020-09-01T00:32:27.000Z">
+<meta property="article:modified_time" content="2020-09-01T16:47:45.564Z">
 <meta property="article:author" content="ZM">
+<meta property="article:tag" content="MySql">
+<meta property="article:tag" content="database">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200901084149.png">
 
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/09/01/MySql/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Z' B</title>
+  <title>MySql | Z' B</title>
   
 
 
@@ -198,7 +219,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -210,6 +231,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">一、数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">二、数据库操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E7%99%BB%E5%BD%95"><span class="nav-number">2.1.</span> <span class="nav-text">1、登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text">2、常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%88%9B%E5%BB%BA%E3%80%81%E4%BF%AE%E6%94%B9%E4%B8%8E%E5%88%A0%E9%99%A4"><span class="nav-number">2.3.</span> <span class="nav-text">3、创建、修改与删除</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">三、数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E6%95%B4%E5%9E%8B"><span class="nav-number">3.1.</span> <span class="nav-text">1、整型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%AE%9A%E7%82%B9%E5%9E%8B%E7%B1%BB%E5%9E%8B%EF%BC%88%E8%A1%A8%E7%A4%BA%E5%B0%8F%E6%95%B0%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">2、浮点数类型和定点型类型（表示小数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E5%9E%8B"><span class="nav-number">3.3.</span> <span class="nav-text">3、日期时间型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="nav-number">3.4.</span> <span class="nav-text">4、字符型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%BB%93%E6%9E%84%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">四、数据库表结构的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%88%9B%E5%BB%BA%E3%80%81%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8"><span class="nav-number">4.1.</span> <span class="nav-text">1、创建、查看数据库表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E4%BF%AE%E6%94%B9%E8%A1%A8"><span class="nav-number">4.2.</span> <span class="nav-text">2、修改表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%88%A0%E9%99%A4%E8%A1%A8"><span class="nav-number">4.3.</span> <span class="nav-text">3、删除表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E8%A1%A8%E5%88%86%E5%8C%BA%EF%BC%88%E4%BC%98%E5%8C%96%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%89"><span class="nav-number">4.4.</span> <span class="nav-text">4、表分区（优化数据库）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%BA%A6%E6%9D%9F"><span class="nav-number">5.</span> <span class="nav-text">五、约束</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E6%A6%82%E5%BF%B5"><span class="nav-number">5.1.</span> <span class="nav-text">1、概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E9%9D%9E%E7%A9%BA%E7%BA%A6%E6%9D%9F"><span class="nav-number">5.2.</span> <span class="nav-text">2、非空约束</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E4%B8%BB%E9%94%AE%E7%BA%A6%E6%9D%9F%EF%BC%88%E6%95%B0%E6%8D%AE%E5%94%AF%E4%B8%80%E6%80%A7%EF%BC%8C%E4%B8%94%E9%9D%9E%E7%A9%BA%EF%BC%8C%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E4%B8%BB%E9%94%AE%EF%BC%89"><span class="nav-number">5.3.</span> <span class="nav-text">3、主键约束（数据唯一性，且非空，只有一个主键）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E5%94%AF%E4%B8%80%E7%BA%A6%E6%9D%9F%EF%BC%88%E5%94%AF%E4%B8%80%E6%80%A7%EF%BC%8C%E5%85%81%E8%AE%B8%E4%B8%BA%E7%A9%BA%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%9C%89%E5%A4%9A%E4%B8%AA%E7%BA%A6%E6%9D%9F%EF%BC%89"><span class="nav-number">5.4.</span> <span class="nav-text">4、唯一约束（唯一性，允许为空，可以有多个约束）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E9%BB%98%E8%AE%A4%E7%BA%A6%E6%9D%9F"><span class="nav-number">5.5.</span> <span class="nav-text">5、默认约束</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F%EF%BC%88%E7%94%A8%E4%BA%8E%E8%A1%A8%E4%B8%8E%E8%A1%A8%E4%B9%8B%E9%97%B4%E5%BB%BA%E7%AB%8B%E8%81%94%E7%B3%BB%E4%BF%9D%E8%AF%81%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E3%80%81%E4%B8%80%E8%87%B4%E6%80%A7%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%98%AF%E4%B8%80%E5%88%97%E6%88%96%E5%A4%9A%E5%88%97%E3%80%82%E4%B8%80%E4%B8%AA%E8%A1%A8%E5%8F%AF%E4%BB%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E6%88%96%E5%A4%9A%E4%B8%AA%E5%A4%96%E9%94%AE%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%B8%BA%E7%A9%BA%E5%80%BC%E3%80%82%E5%A4%96%E9%94%AE%E5%80%BC%E5%BF%85%E9%A1%BB%E6%98%AF%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%A1%A8%E7%9A%84%E4%B8%BB%E9%94%AE%EF%BC%8C%E5%8D%B3%E4%B8%BB%E8%A1%A8%E7%9A%84%E4%B8%BB%E9%94%AE%E4%B8%8E%E4%BB%8E%E8%A1%A8%E7%9A%84%E5%A4%96%E9%94%AE%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%BF%85%E9%A1%BB%E4%B8%80%E8%87%B4%EF%BC%89"><span class="nav-number">5.6.</span> <span class="nav-text">6、外键约束（用于表与表之间建立联系保证数据完整性、一致性，可以是一列或多列。一个表可以有一个或多个外键，可以为空值。外键值必须是另一个表的主键，即主表的主键与从表的外键的数据类型必须一致）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%B0%E5%BD%95%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">6.</span> <span class="nav-text">六、数据库表记录的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%8D%95%E8%A1%A8%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95%E7%9A%84%E6%8F%92%E5%85%A5%EF%BC%88insert%EF%BC%89"><span class="nav-number">6.1.</span> <span class="nav-text">1、单表数据记录的插入（insert）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%8A%A8%E7%BC%96%E5%8F%B7%EF%BC%88%E6%B3%A8%E6%84%8F%E6%9C%89%E5%A4%96%E9%94%AE%E6%97%B6%E8%A6%81%E5%85%88%E5%8F%96%E6%B6%88%E5%A4%96%E9%94%AE%EF%BC%89"><span class="nav-number">6.2.</span> <span class="nav-text">2、设置自动编号（注意有外键时要先取消外键）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%8D%95%E8%A1%A8%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95%E7%9A%84%E6%9B%B4%E6%96%B0%EF%BC%88update%EF%BC%89"><span class="nav-number">6.3.</span> <span class="nav-text">3、单表数据记录的更新（update）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E5%8D%95%E8%A1%A8%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95%E7%9A%84%E5%88%A0%E9%99%A4%EF%BC%88%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F%EF%BC%89"><span class="nav-number">6.4.</span> <span class="nav-text">4、单表数据记录的删除（两种方式）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E5%8D%95%E8%A1%A8%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95%E7%9A%84%E6%9F%A5%E8%AF%A2%EF%BC%88select%EF%BC%89"><span class="nav-number">6.5.</span> <span class="nav-text">5、单表数据记录的查询（select）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81%E5%AF%B9%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BF%9B%E8%A1%8C%E5%88%86%E7%BB%84%EF%BC%88group-by%EF%BC%89%EF%BC%8C%E4%B8%80%E8%88%AC%E4%BD%BF%E7%94%A8%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="nav-number">6.6.</span> <span class="nav-text">6、对查询结果进行分组（group by），一般使用聚合函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7%E3%80%81%E5%AF%B9%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F%EF%BC%88order-by%EF%BC%89"><span class="nav-number">6.7.</span> <span class="nav-text">7、对查询结果进行排序（order by）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8%E3%80%81%E9%99%90%E5%88%B6%E6%9F%A5%E8%AF%A2%E8%AE%B0%E5%BD%95%E7%9A%84%E6%95%B0%E9%87%8F%EF%BC%88limit%EF%BC%89"><span class="nav-number">6.8.</span> <span class="nav-text">8、限制查询记录的数量（limit）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%8E%E5%87%BD%E6%95%B0"><span class="nav-number">7.</span> <span class="nav-text">七、运算符与函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">7.1.</span> <span class="nav-text">1、运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E6%95%B0%E5%80%BC%E5%87%BD%E6%95%B0"><span class="nav-number">7.2.</span> <span class="nav-text">2、数值函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%AD%97%E7%AC%A6%E5%87%BD%E6%95%B0%EF%BC%88%E5%A4%84%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E6%8D%AE%EF%BC%89"><span class="nav-number">7.3.</span> <span class="nav-text">3、字符函数（处理字符串数据）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0%EF%BC%88%E5%A4%84%E7%90%86%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E5%80%BC%EF%BC%89"><span class="nav-number">7.4.</span> <span class="nav-text">4、日期时间函数（处理日期和时间值）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%8D%E9%9C%80%E8%A6%81%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%8F%AA%E7%94%A8%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%89"><span class="nav-number">7.5.</span> <span class="nav-text">5、聚合函数（不需要返回数据，只用于数据分析）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81%E4%BF%A1%E6%81%AF%E5%87%BD%E6%95%B0%E5%92%8C%E5%8A%A0%E5%AF%86%E5%87%BD%E6%95%B0"><span class="nav-number">7.6.</span> <span class="nav-text">6、信息函数和加密函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="nav-number">8.</span> <span class="nav-text">八、子查询</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">8.1.</span> <span class="nav-text">1、使用比较运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E4%BD%BF%E7%94%A8-not-in%E6%88%96exists%E7%9A%84%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="nav-number">8.2.</span> <span class="nav-text">2、使用[not] in或exists的子查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E6%8F%92%E5%85%A5%E8%AE%B0%E5%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="nav-number">8.3.</span> <span class="nav-text">3、插入记录时使用子查询</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%9D%E3%80%81%E5%A4%9A%E8%A1%A8%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2%EF%BC%88%E4%B8%A4%E5%BC%A0%E8%A1%A8%E4%BB%A5%E4%B8%8A%EF%BC%8C%E5%BB%BA%E8%AE%AE%E4%B8%8D%E8%B6%85%E8%BF%87%E4%B8%89%E5%BC%A0%EF%BC%89"><span class="nav-number">9.</span> <span class="nav-text">九、多表连接查询（两张表以上，建议不超过三张）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%86%85%E8%BF%9E%E6%8E%A5%EF%BC%88inner-join-on%EF%BC%89"><span class="nav-number">9.1.</span> <span class="nav-text">1、内连接（inner join on）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%A4%96%E8%BF%9E%E6%8E%A5"><span class="nav-number">9.2.</span> <span class="nav-text">2、外连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E8%87%AA%E8%BF%9E%E6%8E%A5%EF%BC%88%E5%A4%84%E7%90%86%E9%80%BB%E8%BE%91%E4%B8%8A%E7%9A%84%E4%B8%A4%E5%BC%A0%E8%A1%A8%EF%BC%8C%E5%9C%A8%E7%89%A9%E7%90%86%E5%AE%9E%E9%99%85%E4%B8%BA%E4%B8%80%E5%BC%A0%E8%A1%A8%E7%9A%84%E6%83%85%E5%86%B5%EF%BC%89"><span class="nav-number">9.3.</span> <span class="nav-text">3、自连接（处理逻辑上的两张表，在物理实际为一张表的情况）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E5%A4%9A%E8%A1%A8%E6%9B%B4%E6%96%B0"><span class="nav-number">9.4.</span> <span class="nav-text">4、多表更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E5%A4%9A%E8%A1%A8%E5%88%A0%E9%99%A4"><span class="nav-number">9.5.</span> <span class="nav-text">5、多表删除</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%81%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="nav-number">10.</span> <span class="nav-text">十、自定义函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%88%9B%E5%BB%BA%E5%87%BD%E6%95%B0"><span class="nav-number">10.1.</span> <span class="nav-text">1、创建函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%88%A0%E9%99%A4%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="nav-number">10.2.</span> <span class="nav-text">2、删除自定义函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E4%BD%BF%E7%94%A8"><span class="nav-number">10.3.</span> <span class="nav-text">3、流程控制使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B"><span class="nav-number">11.</span> <span class="nav-text">十一、存储过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E6%98%AFSQL%E8%AF%AD%E5%8F%A5%E5%92%8C%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5%E7%9A%84%E9%A2%84%E7%BC%96%E8%AF%91%E9%9B%86%E5%90%88%EF%BC%8C%E5%B9%B6%E4%BB%A5%E4%B8%80%E4%B8%AA%E5%90%8D%E7%A7%B0%E5%AD%98%E5%82%A8%E4%BD%9C%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%8D%95%E5%85%83%E8%BF%9B%E8%A1%8C%E5%A4%84%E7%90%86"><span class="nav-number">11.1.</span> <span class="nav-text">1、存储过程是SQL语句和流程控制语句的预编译集合，并以一个名称存储作为一个单元进行处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%88%9B%E5%BB%BA%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B"><span class="nav-number">11.2.</span> <span class="nav-text">2、创建存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E8%B0%83%E7%94%A8%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B"><span class="nav-number">11.3.</span> <span class="nav-text">3、调用存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E5%88%A0%E9%99%A4%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B"><span class="nav-number">11.4.</span> <span class="nav-text">4、删除存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E5%88%9B%E5%BB%BA%E5%A4%8D%E5%90%88%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B"><span class="nav-number">11.5.</span> <span class="nav-text">5、创建复合结构的存储过程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E4%BA%8B%E5%8A%A1"><span class="nav-number">12.</span> <span class="nav-text">十二、事务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E4%BA%8B%E5%8A%A1%E5%BF%85%E9%A1%BB%E6%BB%A1%E8%B6%B3%E4%BB%A5%E4%B8%8B%E6%9D%A1%E4%BB%B6"><span class="nav-number">12.1.</span> <span class="nav-text">1、事务必须满足以下条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E6%8E%A7%E5%88%B6%E4%BA%8B%E5%8A%A1%E5%A4%84%E7%90%86"><span class="nav-number">12.2.</span> <span class="nav-text">2、控制事务处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E9%80%9A%E8%BF%87InnoDB%E4%BD%BF%E7%94%A8%E4%BA%8B%E5%8A%A1"><span class="nav-number">12.3.</span> <span class="nav-text">3、通过InnoDB使用事务</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%81%E4%B8%89%E3%80%81%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E"><span class="nav-number">13.</span> <span class="nav-text">十三、存储引擎</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E"><span class="nav-number">13.1.</span> <span class="nav-text">1、存储引擎</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E7%9A%84%E8%AE%BE%E7%BD%AE"><span class="nav-number">13.2.</span> <span class="nav-text">2、存储引擎的设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%81%E5%9B%9B%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%AE%A1%E7%90%86%E7%BB%B4%E6%8A%A4"><span class="nav-number">14.</span> <span class="nav-text">十四、数据库的管理维护</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="nav-number">14.1.</span> <span class="nav-text">1、数据库的用户管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86"><span class="nav-number">14.2.</span> <span class="nav-text">2、数据库用户权限管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86"><span class="nav-number">14.3.</span> <span class="nav-text">3、数据库的日志管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8D"><span class="nav-number">14.4.</span> <span class="nav-text">4、数据库的备份和恢复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA"><span class="nav-number">14.5.</span> <span class="nav-text">5、数据导出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5"><span class="nav-number">14.6.</span> <span class="nav-text">6、数据导入</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -322,251 +344,12 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
       
 
       
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/25/spring-%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E7%94%B0.jpg">
-      <meta itemprop="name" content="ZM">
-      <meta itemprop="description" content="一个旅人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z' B">
-    </span>
 
     
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/25/spring-%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">spring 笔记</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-            <font color=#FFFFFF><b style="background-color:#A9A9A9">　Top　</b></font>
-            <span class="post-meta-divider">|</span>
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-08-25 11:05:39" itemprop="dateCreated datePublished" datetime="2020-08-25T11:05:39+08:00">2020-08-25</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-08-27 22:18:05" itemprop="dateModified" datetime="2020-08-27T22:18:05+08:00">2020-08-27</time>
-      </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/08/25/spring-%E7%AC%94%E8%AE%B0/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/25/spring-%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>15k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>14 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="一、IoC容器（控制反转，也叫DI：依赖注入）"><a href="#一、IoC容器（控制反转，也叫DI：依赖注入）" class="headerlink" title="一、IoC容器（控制反转，也叫DI：依赖注入）"></a>一、IoC容器（控制反转，也叫DI：依赖注入）</h1><h2 id="1、搭建spring环境"><a href="#1、搭建spring环境" class="headerlink" title="1、搭建spring环境"></a>1、搭建spring环境</h2><h3 id="1-1导包（5-1）"><a href="#1-1导包（5-1）" class="headerlink" title="1.1导包（5+1）"></a>1.1导包（5+1）</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/25/spring-%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/25/hexo-themes-Next%20Setting/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E7%94%B0.jpg">
-      <meta itemprop="name" content="ZM">
-      <meta itemprop="description" content="一个旅人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z' B">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/25/hexo-themes-Next%20Setting/" class="post-title-link" itemprop="url">hexo-themes-Next Setting</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-            <font color=#FFFFFF><b style="background-color:#A9A9A9">　Top　</b></font>
-            <span class="post-meta-divider">|</span>
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-08-25 15:47:31" itemprop="dateCreated datePublished" datetime="2020-08-25T15:47:31+08:00">2020-08-25</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-08-26 23:00:21" itemprop="dateModified" datetime="2020-08-26T23:00:21+08:00">2020-08-26</time>
-      </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/08/25/hexo-themes-Next%20Setting/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/25/hexo-themes-Next%20Setting/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>33k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>30 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="头像设置"><a href="#头像设置" class="headerlink" title="头像设置"></a>头像设置</h3><p>【1】Config：  <strong><em>_config.xml</em></strong>（themes）</p>
-<p><code>avatar: </code></p>
-<p><code>url: /images/头像.jpg</code></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/25/hexo-themes-Next%20Setting/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -585,10 +368,9 @@
     
     
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/01/MySql/" class="post-title-link" itemprop="url">MySql</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          MySql
+        </h1>
 
         <div class="post-meta-container">
           
@@ -610,6 +392,13 @@
       </span>
 
   
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
   
   <span class="post-meta-item">
     
@@ -649,7 +438,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="一、数据库"><a href="#一、数据库" class="headerlink" title="一、数据库"></a>一、数据库</h1><p>1.1、database（DB）：数据库：按照数据结构来组织，存储和管理数据的仓库。</p>
+        <h1 id="一、数据库"><a href="#一、数据库" class="headerlink" title="一、数据库"></a>一、数据库</h1><p>1.1、database（DB）：数据库：按照数据结构来组织，存储和管理数据的仓库。</p>
 <p>Database Management System （DBMS）：对数据进行管理的软件系统</p>
 <p>1.2、近年数据库使用情况：<a target="_blank" rel="noopener" href="https://db-engines.com/en/ranking/relational+dbms">DB-ENGINES</a></p>
 <img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200901084149.png" style="zoom:50%;" />
@@ -1383,7 +1172,6 @@
 
 <p>6.2方式二：未登录</p>
 <img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200902004643.png" style="zoom:50%;" />
-      
     </div>
 
     
@@ -1395,1076 +1183,56 @@
 
     <div>
       
-    </div>
-
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/31/SpringBoot/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E7%94%B0.jpg">
-      <meta itemprop="name" content="ZM">
-      <meta itemprop="description" content="一个旅人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z' B">
-    </span>
-
+        <div>
     
+        <div style="text-align:center;color: #FA8072;font-size:10px;">------------- End  <i class="fa fa-hourglass-end" aria-hidden="true"></i>  Thank For Your Reading -------------</div>
     
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/31/SpringBoot/" class="post-title-link" itemprop="url">SpringBoot</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2020-08-31 08:20:27 / 修改时间：20:18:37" itemprop="dateCreated datePublished" datetime="2020-08-31T08:20:27+08:00">2020-08-31</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/08/31/SpringBoot/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/31/SpringBoot/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>9k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>8 分钟</span>
-    </span>
 </div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p><img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831082609.png"></p>
-<p>1.微服务：一个项目 可以由多个 小型服务构成（微服务）<br>2.spring boot可以快速开发 微服务模块<br>    a.简化j2ee开发<br>    b.整合spring技术栈的整合（整合springmvc  spring）<br>    c.整合j2ee技术的整合（整合mybatis redis）</p>
-<p>3、准备：<br>jdk:<br>    JAVA_HOME： jdk根目录<br>    path:jdk根目录\bin<br>    classpath: .;jdk根目录\lib<br>maven:<br>    MAVEN_HOME： maven根目录<br>    path: maven根目录\bin<br>    配置Maven本地仓库：  mvn根目录/conf/setting.xml : <localRepository>D:/mvnrep</localRepository><br>    在IDE中配置mvn：<br>        window-&gt;preference-&gt;搜maven ,installations/user settings</p>
-<p>4、spring boot开发工具：<br>    Eclipse(STS插件)<br>    IntelliJ IDEA</p>
-<p>5、目录结构resources：<br>    static:静态资源（js css 图片 音频 视频）<br>    templates：模板文件（模版引擎freemarker ,thymeleaf；默认不支持jsp）<br>    application.properties： 配置文件</p>
-<p>6、spring boot内置了tomcat，并且不需要打成war再执行。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Controller</span><br><span class="line">public class DemoHandler &#123;</span><br><span class="line">	@ResponseBody</span><br><span class="line">	@RequestMapping(&quot;pring&quot;)</span><br><span class="line">	public String print() &#123;</span><br><span class="line">		return &quot;直接显示，不需要配置Tomcat&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>直接运行DemoApplication.java，在浏览器输入以下地址可以看到：</p>
-<p><img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831094007.png"></p>
-<p>可以在appication.properties对端口号等服务端信息进行配置，其他修改端口的方法放在附录一。</p>
-<h1 id="二、各板块说明"><a href="#二、各板块说明" class="headerlink" title="二、各板块说明"></a>二、各板块说明</h1><h2 id="1、pom-xml"><a href="#1、pom-xml" class="headerlink" title="1、pom.xml"></a>1、pom.xml</h2><p>1.1、spring boot将各个应用/三方框架 设置成了一个个“场景”stater，<br> 以后要用哪个，只需要引入那个场景即可。<br>选完之后，spring boot就会将 该场景所需要的所有依赖 自动注入。<br>例如 选择 “web”,spring boot就会将web相关的依赖（tomcat  json） 全部引入本项目</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-web&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2、-SpringBootApplication注解自动配置"><a href="#2、-SpringBootApplication注解自动配置" class="headerlink" title="2、@SpringBootApplication注解自动配置"></a>2、@SpringBootApplication注解自动配置</h2><p>2.1、该注解是spring boot的主配置类，包含：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Target(ElementType.TYPE)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Documented</span><br><span class="line">@Inherited</span><br><span class="line">@SpringBootConfiguration</span><br><span class="line">@EnableAutoConfiguration</span><br><span class="line">@ComponentScan(excludeFilters &#x3D; &#123; @Filter(type &#x3D; FilterType.CUSTOM, classes &#x3D; TypeExcludeFilter.class),</span><br><span class="line">		@Filter(type &#x3D; FilterType.CUSTOM, classes &#x3D; AutoConfigurationExcludeFilter.class) &#125;)</span><br></pre></td></tr></table></figure>
-
-<p>2.2、其中@SpringBootConfiguration，用于<code>导入自己写的配置</code>。又包含了@Configuration，被该注解表示的类表示<code>“配置类”</code>,即：                                </p>
-<p>①该类是一个配置类    </p>
-<p>②加了@Configuration注解的类，会自动纳入Spring 容器  （相当于spring的@Component）</p>
-<p>2.3、其中@EnableAutoConfiguration，用于自动配置 <code>三方依赖</code>：</p>
-<p>①可以找到@SpringBootApplication所在类的包 ，作用：就会将该包及所有的子包 全部纳入spring容器</p>
-<p>②spring boot在启动时，会根据spring-boot-autoconfigure-2.3.3.RELEASE.jar/META-INF/spring.factories找到相应的三方依赖，并通过@EnableAutoConfiguration将这些依赖引入本项目</p>
-<p><img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831104831.png"></p>
-<p>2.4、<code>spring-boot-autoconfigure-2.0.3.RELEASE.jar</code>包中 包含了 J2EE整合体系中 需要的依赖，既提供了类，也提供了配置（spring.factories）</p>
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831110037.png" style="zoom: 33%;" />
-
-
-
-<p>2.5、自动装配：</p>
-<p>①通过<code>spring.factories</code>和<code>spring-boot-autoconfigure-2.0.3.RELEASE.jar</code>进入要查看的类，如：org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration</p>
-<p>②当该类满足以下三个条件时才会装配：</p>
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831112738.png" style="zoom:50%;" />
-
-<p>②在此类中有：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@ConditionalOnProperty(prefix &#x3D; &quot;server.servlet.encoding&quot;, value &#x3D; &quot;enabled&quot;, matchIfMissing &#x3D; true)</span><br><span class="line">当属性满足要求时，此条件成立  ：要求 如果没有配置spring.http.encoding.enabled&#x3D;xxx, 则成立。</span><br></pre></td></tr></table></figure>
-
-<p>此外可以通过前缀可在配置文件中对属性进行修改。</p>
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831111938.png" style="zoom:50%;" />
-
-
-
-<p>③在全局配置文件src/main/resources/application.properties中配置：</p>
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831112300.png" style="zoom:50%;" />
-
-<p>2.6、快速查看自动装配的类：在全局配置文件application.properties中添加debug=true<br>        Positive matches列表 表示 spring boot自动开启的装配</p>
-<p>​        Negative matches列表 表示spring boot在此时 并没有启用的自动装配</p>
-<p>​        Exclusions列表表示排除的自动装配</p>
-<p>​        Unconditional classes列表表示不满足条件的自动装配</p>
-<h2 id="3、全局配置文件"><a href="#3、全局配置文件" class="headerlink" title="3、全局配置文件"></a>3、全局配置文件</h2><p>3.1、全局配置文件可以对SpringBootd的默认配置进行修改。</p>
-<p>3.2、src/main/resources/application.properties</p>
-<p>①key=value</p>
-<p>3.3、application.yml</p>
-<p>①yaml ain’t myarkup language ，不是一个标记文档</p>
-<p>②k:空格v</p>
-<p>③通过垂直对齐指定层次关系</p>
-<p>④默认可以不写引号； “”会将其中的转义符进行转义，其他不会</p>
-<p>⑤集合（除Map）、数组用<code>[]</code>，可以省略；Map、引用用<code>&#123;&#125;</code>，不可省略</p>
-<p>3.4、通过.yml配置文件给对象的属性注入值</p>
-<p>①在yaml文件中添加值：</p>
-<p>②绑定：</p>
-<p>方式一：@ConfigurationProperties</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Component &#x2F;&#x2F;加入容器</span><br><span class="line">@ConfigurationProperties(prefix &#x3D; &quot;student&quot;)&#x2F;&#x2F;与.yml配置文件产生关联</span><br><span class="line">public class Student &#123;</span><br><span class="line">……&#125;</span><br></pre></td></tr></table></figure>
-
-<p>方式二：@Value(“XXX”)，单个注入</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>@ConfigurationProperties</th>
-<th>@Value</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>注值</td>
-<td>批量注入</td>
-<td>单个注入</td>
-</tr>
-<tr>
-<td>松散语法</td>
-<td>支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>SqEL</td>
-<td>不支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>JSR303数据校验<br />（@Validated开启数据检验）</td>
-<td>支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>复杂类型的注入<br />（简单类型：8+String+Date）</td>
-<td>支持</td>
-<td>不支持</td>
-</tr>
-</tbody></table>
-<p>3.5、@PropertySource(value={“classpath:conf.properties”})可以设置自定义文件名的<code>.properties</code>文件，但是不能加载yml</p>
-<h2 id="4、全局配置文件的位置"><a href="#4、全局配置文件的位置" class="headerlink" title="4、全局配置文件的位置"></a>4、全局配置文件的位置</h2><p>4.1、properties和yml中的配置，相互补充；如果冲突，则properties优先级高。<br>4.2、spring boot默认能够读取的application.properties/application.yml，这2个文件 可以存在于以下4个地方：</p>
-<blockquote>
-<p>file:项目根目录/config         application.properties<br>file:项目根目录            application.properties<br>classpath:项目根目录/config    application.properties<br>classpath:项目根目录        application.properties        </p>
-</blockquote>
-<p>a.如果某项配置冲突，则优先级从上往下<br>b.如果不冲突，则互补结合使用</p>
-<p>4.3、配置文件也可以项目从外部引入：如果 同一个配置同时存在于内部配置文件和外部配置文件，则外部&gt;内部</p>
-<p>①配置项目名：在properties文件中配置，此时可以在浏览器中输入<code>http://localhost:8888/boot/映射名</code>访问</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server.servlet.context-path&#x3D;&#x2F;boot</span><br></pre></td></tr></table></figure>
-
-<p>②如果在外部有一个配置文件application.properties配置如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server.servlet.context-path&#x3D;&#x2F;XXXboot</span><br></pre></td></tr></table></figure>
-
-<p>方式一：<code>Run Configurations</code>中的参数项添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--spring.config.location&#x3D;D:&#x2F;application.properties</span><br></pre></td></tr></table></figure>
-
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831154505.png" style="zoom:50%;" />
-
-<p>方式二：通过命令行调用外部配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar  项目.jar  --spring.config.location&#x3D;D:&#x2F;application.properties</span><br></pre></td></tr></table></figure>
-
-<p>4.4、项目运行参数的更改（适合少量参数的更改）</p>
-<p>方式一：<code>Run Configurations</code>中的参数项添加，多个用空格隔开</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--server.port&#x3D;8883</span><br></pre></td></tr></table></figure>
-
-<p>方式二：通过命令行调用外部配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar  项目.jar  --server.port&#x3D;8883</span><br></pre></td></tr></table></figure>
-
-<p>4.5、优先级：<br>命令参数（调用外部的配置文件 &gt; 运行参数 ）&gt;内部文件 (properties&gt;yaml)</p>
-<p><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/htmlsingle/#boot-features-external-config">官方文档</a></p>
-<h2 id="5、自已配置spring的IOC容器"><a href="#5、自已配置spring的IOC容器" class="headerlink" title="5、自已配置spring的IOC容器"></a>5、自已配置spring的IOC容器</h2><p>5.1、方式一：编写XXX.xml文件+@ImportResource</p>
-<p>spring boot自动装配默认不识别spring等配置文件，如果需要识别自己编写的spring等配置文件，则需要在spring boot主配置类@SpringBootApplication上通过@ImportResource（locations={“classpath:XXX”}）指定配置文件的路径</p>
-<p>5.2、方式二：配置类（@Configuration）+注解（@Bean）</p>
-<p>配置类的方法名==XXX.xml中的id</p>
-<h2 id="6、全局配置文件占位符表达式"><a href="#6、全局配置文件占位符表达式" class="headerlink" title="6、全局配置文件占位符表达式"></a>6、全局配置文件占位符表达式</h2><p>6.1、随机数</p>
-<table>
-<thead>
-<tr>
-<th>${random.uuid}</th>
-<th>UUID</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>${random.value}</td>
-<td>随机字符串</td>
-</tr>
-<tr>
-<td>${random.int}</td>
-<td>随机整数</td>
-</tr>
-<tr>
-<td>${random.long}</td>
-<td>随机长整数</td>
-</tr>
-<tr>
-<td>${random.int(10)}</td>
-<td>10以内的整数</td>
-</tr>
-<tr>
-<td>${random.int[100,200]}</td>
-<td>指定范围</td>
-</tr>
-</tbody></table>
-<p>6.2、相互引用变量值     </p>
-<pre><code>yml中：
-    student:
-          name: $&#123;student.user.name&#125;
-实际引用的是properties中的student.user.name=XXX</code></pre>
-<p>6.3、设置默认值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student:</span><br><span class="line"> 		name: $&#123;student.user.name2: 默认值&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="7、全局配置文件配置环境切换"><a href="#7、全局配置文件配置环境切换" class="headerlink" title="7、全局配置文件配置环境切换"></a>7、全局配置文件配置环境切换</h2><p>7.1、方法一：application.properties</p>
-<p>①创建开发环境的配置文件：</p>
-<p>src/main/resources/application-dev.properties</p>
-<p>src/main/resources/application-test.properties</p>
-<p>②在主配置文件src/main/resources/application.properties中配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">spring.profiles.active&#x3D;dev</span><br><span class="line">或</span><br><span class="line">spring.profiles.active&#x3D;test</span><br></pre></td></tr></table></figure>
-
-<p>7.2、方法二：通过yaml文件配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 8888</span><br><span class="line">spring:</span><br><span class="line">  profiles: </span><br><span class="line">    active: dev 选择环境</span><br><span class="line">---</span><br><span class="line">server: </span><br><span class="line">  port: 8887</span><br><span class="line">spring:</span><br><span class="line">  profiles: dev</span><br><span class="line">---</span><br><span class="line">server: </span><br><span class="line">  port: 8885</span><br><span class="line">spring:  </span><br><span class="line">  profiles: test</span><br></pre></td></tr></table></figure>
-
-<p>使用方式二注意点：spring boot会读取其他appilcation-环境名.properties中的配置，并且properties的优先级高于yml，所以要在yaml文件中切换环境时要完全注释appilcation中关于环境切换的代码。</p>
-<p>7.3、方法三：动态切换</p>
-<p>①动态切换一：在编译器中（STS）在<code>Run Configurations</code>中设定：（二选一）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">--spring.profiles.active&#x3D;环境名</span><br><span class="line">或</span><br><span class="line">-Dspring.profiles.active&#x3D;环境名</span><br></pre></td></tr></table></figure>
-
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831150003.png" style="zoom:50%;" />
-
-<p>②动态切换一：命令行方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar 项目名.jar --spring.profiles.active&#x3D;环境名</span><br></pre></td></tr></table></figure>
-
-<h1 id="三、日志"><a href="#三、日志" class="headerlink" title="三、日志"></a>三、日志</h1><p>8.1、spring boot默认选用的日志框架是<code>slf4j</code>、<code>logback</code>,并且默认帮我们配置好了日志。其他：UCL、JUL、jboss-logging、log4j、log4j2……</p>
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831160252.png" style="zoom: 33%;" />
-
-<p>8.2、日志级别：</p>
-<p>①TRACE&lt; DEBUG&lt; INFO&lt;WARN&lt; ERROR&lt; FATAL&lt;OFF</p>
-<p>②springboot默认的日志级别是info（即只打印info及之后级别的信息）</p>
-<p>③自定义级别，在配置文件中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">logging.level.com.com.example.demo&#x3D;warn</span><br><span class="line">&#x2F;&#x2F;logging.level.主配置类所在包&#x3D;级别</span><br></pre></td></tr></table></figure>
-
-<p>④日志存储</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">logging.file&#x3D;springboot.log &#x2F;&#x2F;存储到了项目的根目录中的springboot.log</span><br><span class="line">logging.file&#x3D;D:&#x2F;springboot.log &#x2F;&#x2F;指定具体的日志路径</span><br><span class="line">logging.path&#x3D;D:&#x2F;log&#x2F;   &#x2F;&#x2F;指定具体的日志文件夹，默认的文件名是spring.log</span><br></pre></td></tr></table></figure>
-
-<p>⑤自定义日志显示格式</p>
-<p>a、控制台：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">logging.pattern.console&#x3D;%d&#123;yyyy-MM-dd&#125; [%thread] %-5level %logger&#123;50&#125; - %msg%n</span><br></pre></td></tr></table></figure>
-
-<p>​                    %d:日期时间<br>​                    %thread：线程名<br>​                    %-5level： 显示日志级别,-5表示从左显示5个字符宽度<br>​                    %logger{50} :设置日志长度  ，超过则显示首字母o.s.w.s.m.m.a.</p>
-<p>%msg：日志消息<br>                %n ：回车<br>b、日志显示在文件中    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">logging.pattern.file&#x3D;%d&#123;yyyy-MM-dd&#125; ** [%thread] ** %-5level ** %logger&#123;50&#125;** %msg%n</span><br></pre></td></tr></table></figure>
-
-<p>默认的日志格式，是在 jar包中 相应包的xml文件中进行配置。</p>
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831163812.png" style="zoom: 33%;" />
-
-
-
-<p><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/htmlsingle/#boot-features-custom-log-levels">官方文档</a></p>
-<h1 id="四、SpringBoot开发Web项目（静态资源-html-css-js）"><a href="#四、SpringBoot开发Web项目（静态资源-html-css-js）" class="headerlink" title="四、SpringBoot开发Web项目（静态资源 html css js）"></a>四、SpringBoot开发Web项目（静态资源 html css js）</h1><h2 id="1、静态资源存放路径"><a href="#1、静态资源存放路径" class="headerlink" title="1、静态资源存放路径"></a>1、静态资源存放路径</h2><p>1.1、spring boot是一个jar，因此静态资源就不是再存放到 webapps中，静态资源的存放路径是通过WebMvcAutoConfiguration类的addResourceHandlers()指定:/webjars/<br>1.2、spring boot将静态资源存入到jar包中，引入: 从Jar目录结构的webjars开始写：<a target="_blank" rel="noopener" href="http://localhost:8080/webjars/jquery/3.5.1/jquery.js">http://localhost:8080/webjars/jquery/3.5.1/jquery.js</a></p>
-<p>①<a target="_blank" rel="noopener" href="https://www.webjars.org/">WebJars官网</a></p>
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831170844.png" style="zoom:50%;" />
-
-
-
-<p>②pom.xml处理依赖：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">		    &lt;groupId&gt;org.webjars&lt;&#x2F;groupId&gt;</span><br><span class="line">		    &lt;artifactId&gt;jquery&lt;&#x2F;artifactId&gt;</span><br><span class="line">		    &lt;version&gt;3.5.1&lt;&#x2F;version&gt;</span><br><span class="line">		&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
-
-<p>③引入：<a target="_blank" rel="noopener" href="http://localhost:8080/webjars/jquery/3.5.1/jquery.js">http://localhost:8080/webjars/jquery/3.5.1/jquery.js</a></p>
-<p><img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831171216.png"></p>
-<p>④访问</p>
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831171840.png" style="zoom:33%;" />
-
-<h2 id="2、将自己的资源放入SpringBoot中"><a href="#2、将自己的资源放入SpringBoot中" class="headerlink" title="2、将自己的资源放入SpringBoot中"></a>2、将自己的资源放入SpringBoot中</h2><p>2.1、将自己写的静态资源打包成jar，同上（不推荐）</p>
-<p>2.2、spring boot约定的静态资源存放目录，我们把静态资源直接放入这些目录即可</p>
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831172805.png" style="zoom:50%;" />
-
-<p><img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831173302.png"></p>
-<p>在以上目录存放资源文件后，访问时  不需要加前缀，直接访问即可</p>
-<p>2.3、设置首页</p>
-<p>WebMvcAutoConfiguration类中的welcomePageHandlerMapping() –&gt;getIndexHtml() –&gt; location + “index.html” ,即任意一个静态资源目录中的 Index.html就是欢迎页</p>
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831174048.png" style="zoom:50%;" />
-
-
-
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831174340.png" style="zoom:50%;" />
-
-
-
-<p>2.4、自定义 favicon.ico（网站logo）</p>
-<p>只需要将 favicon.ico文件放入任意静态资源目录中即可</p>
-<h2 id="3、自定义路径（Properties文件中的-prefix-属性）"><a href="#3、自定义路径（Properties文件中的-prefix-属性）" class="headerlink" title="3、自定义路径（Properties文件中的 prefix+属性）"></a>3、自定义路径（Properties文件中的 prefix+属性）</h2><img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831172805.png" style="zoom:50%;" />
-
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring.resources.static-locations&#x3D;classpath:&#x2F;res&#x2F;, classpath:&#x2F;img&#x2F;</span><br></pre></td></tr></table></figure>
-
-<p>自定义静态资源目录后  以前默认的目录会失效（自动装配失效）</p>
-<h1 id="五、动态资源的处理：JSP-spring-boot默认不支持"><a href="#五、动态资源的处理：JSP-spring-boot默认不支持" class="headerlink" title="五、动态资源的处理：JSP(spring boot默认不支持)"></a>五、动态资源的处理：JSP(spring boot默认不支持)</h1><h2 id="1、模板引擎-thymeleaf"><a href="#1、模板引擎-thymeleaf" class="headerlink" title="1、模板引擎 thymeleaf"></a>1、模板引擎 thymeleaf</h2><img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831181125.png" style="zoom:50%;" />
-
-
-
-<p>依赖：<a target="_blank" rel="noopener" href="https://www.springcloud.cc/spring-boot.html#using-boot-starter">官方文档</a></p>
-<p>使用：<a target="_blank" rel="noopener" href="https://www.thymeleaf.org/documentation.html">官方文档</a></p>
-<h2 id="2、使用"><a href="#2、使用" class="headerlink" title="2、使用"></a>2、使用</h2><p>boot通过XxAutoConfiguration实现自动装配 ，修改默认值 XxxProperties（ prefix+属性名）</p>
-<p>查找：spring-boot-autoconfigure-2.3.3.RELEASE.jar<br>–&gt;org.springframework.boot.autoconfigure.thymeleaf<br>–&gt;ThymeleafAutoCongifutation 、XxProperties</p>
-<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200831182454.png" style="zoom:50%;" />
-
-<p>使用thymeleaf只需要将 文件放入目录：”classpath:/templates/“;  文件的后缀： “.html”;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">th就是替换原有html的值：th:html属性名&#x3D;值 ;</span><br><span class="line">		&lt;p id&#x3D;&quot;pid&quot; class&#x3D;&quot;pclass&quot;  th:id&#x3D;&quot;$&#123;welcome&#125;&quot; th:class&#x3D;&quot;$&#123;welcome&#125;&quot;  th:text&#x3D;&quot;$&#123;welcome&#125;&quot;&gt;welcome to thymeleaf....&lt;&#x2F;p&gt;</span><br></pre></td></tr></table></figure>
-
-<h1 id="六、Spring-boot整合JSP开发"><a href="#六、Spring-boot整合JSP开发" class="headerlink" title="六、Spring boot整合JSP开发"></a>六、Spring boot整合JSP开发</h1><h2 id="1、新建boot项目，-war"><a href="#1、新建boot项目，-war" class="headerlink" title="1、新建boot项目， war"></a>1、新建boot项目， war</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-tomcat&lt;&#x2F;artifactId&gt;</span><br><span class="line">	&lt;scope&gt;provided&lt;&#x2F;scope&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
-
-<p>provided：意思是 将项目打包时，不需要将内置的tomcat一起打包</p>
-<p>​                provided：意思是 将项目打包时，不需要将内置的tomcat一起打包。</p>
-<h2 id="2-建立基本的web项目所需要的目录结构"><a href="#2-建立基本的web项目所需要的目录结构" class="headerlink" title="2.建立基本的web项目所需要的目录结构"></a>2.建立基本的web项目所需要的目录结构</h2><p>webapps/WEB-INF(需要)<br>webapps/WEB-INF/web.xml (不需要)<br>webapps/index.jsp</p>
-<h2 id="3、创建tomcat实例、部署项目"><a href="#3、创建tomcat实例、部署项目" class="headerlink" title="3、创建tomcat实例、部署项目"></a>3、创建tomcat实例、部署项目</h2><p>如果是一个war包的spring boot项目，在启动服务器tomcat时， 会自动调用ServletInitializer类中 的configure方法，configure方法会调用spring boot的主配置类 从而启动spring boot；即在启动tomcat服务器时  会1启动tomcat  2启动spring boot</p>
-<h1 id="附录一：关于修改默认端口："><a href="#附录一：关于修改默认端口：" class="headerlink" title="附录一：关于修改默认端口："></a>附录一：关于修改默认端口：</h1><p>1、配置/src/main/resources/application.properties:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server.port&#x3D;9090</span><br></pre></td></tr></table></figure>
-
-<p>2、实现EmbeddedServletContainerCustomizer接口，重写方法更改</p>
-<p>3、命令行更改：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ava -Dserver.port &#x3D; 9090 -jar executable.jar</span><br><span class="line">或</span><br><span class="line">java -jar executable.jar -server.port &#x3D; 9090</span><br></pre></td></tr></table></figure>
-
-<p>4、端口被占用又不想更改咋办？</p>
-<p>①查到被占端口：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano | findstr 8080</span><br></pre></td></tr></table></figure>
-
-<p>②杀了占用它的进程：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill -PID 135940 -F</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      
-
-
-
-    <div>
       
     </div>
 
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/30/Maven/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E7%94%B0.jpg">
-      <meta itemprop="name" content="ZM">
-      <meta itemprop="description" content="一个旅人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z' B">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/30/Maven/" class="post-title-link" itemprop="url">Maven</a>
-        </h2>
 
-        <div class="post-meta-container">
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
+  <div class="followme">
+    <span>欢迎关注我的其它发布渠道</span>
 
-      <time title="创建时间：2020-08-30 20:03:03 / 修改时间：23:59:45" itemprop="dateCreated datePublished" datetime="2020-08-30T20:03:03+08:00">2020-08-30</time>
-    </span>
+    <div class="social-list">
 
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/08/30/Maven/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/30/Maven/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>5.2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
-    </span>
-</div>
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
 
+            <span class="label">RSS</span>
+          </a>
         </div>
-      </header>
+    </div>
+  </div>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="一、Maven功能"><a href="#一、Maven功能" class="headerlink" title="一、Maven功能"></a>一、Maven功能</h1>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/30/Maven/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+          <div class="post-tags">
+              <a href="/tags/MySql/" rel="tag"><i class="fa fa-tag"></i> MySql</a>
+              <a href="/tags/database/" rel="tag"><i class="fa fa-tag"></i> database</a>
+          </div>
+
         
-      
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
     </div>
+  </div>
 
-    
-    
-    
-      
-
-
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/29/Exception/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E7%94%B0.jpg">
-      <meta itemprop="name" content="ZM">
-      <meta itemprop="description" content="一个旅人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z' B">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/29/Exception/" class="post-title-link" itemprop="url">Exception</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-08-29 11:01:59" itemprop="dateCreated datePublished" datetime="2020-08-29T11:01:59+08:00">2020-08-29</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-08-31 19:24:21" itemprop="dateModified" datetime="2020-08-31T19:24:21+08:00">2020-08-31</time>
-      </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/08/29/Exception/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/29/Exception/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="一、SpringMVC请求方式为PUT和DELETE时出现405：方法不允许（已解决）"><a href="#一、SpringMVC请求方式为PUT和DELETE时出现405：方法不允许（已解决）" class="headerlink" title="一、SpringMVC请求方式为PUT和DELETE时出现405：方法不允许（已解决）"></a>一、SpringMVC请求方式为PUT和DELETE时出现405：方法不允许（已解决）</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/29/Exception/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/08/31/SpringBoot/" rel="prev" title="SpringBoot">
+                  <i class="fa fa-chevron-left"></i> SpringBoot
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/29/SpringMVC%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E7%94%B0.jpg">
-      <meta itemprop="name" content="ZM">
-      <meta itemprop="description" content="一个旅人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z' B">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/29/SpringMVC%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">SpringMVC笔记</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-08-29 06:58:47" itemprop="dateCreated datePublished" datetime="2020-08-29T06:58:47+08:00">2020-08-29</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-08-30 19:11:59" itemprop="dateModified" datetime="2020-08-30T19:11:59+08:00">2020-08-30</time>
-      </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/08/29/SpringMVC%E7%AC%94%E8%AE%B0/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/29/SpringMVC%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>28k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>25 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>f335fe81d0894ce1de0333d7b824dd61fde7b173</p>
-<p>1680e0879157ecaa2d8af2251a39d42a</p>
-<h1 id="一、环境搭建"><a href="#一、环境搭建" class="headerlink" title="一、环境搭建"></a>一、环境搭建</h1>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/29/SpringMVC%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+            <div class="post-nav-item">
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/27/Mybatis-%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E7%94%B0.jpg">
-      <meta itemprop="name" content="ZM">
-      <meta itemprop="description" content="一个旅人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z' B">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/27/Mybatis-%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Mybaatis 笔记</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-08-27 22:17:23" itemprop="dateCreated datePublished" datetime="2020-08-27T22:17:23+08:00">2020-08-27</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-08-28 16:40:02" itemprop="dateModified" datetime="2020-08-28T16:40:02+08:00">2020-08-28</time>
-      </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/08/27/Mybatis-%E7%AC%94%E8%AE%B0/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/27/Mybatis-%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>20k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>18 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="一、Mybatis简介"><a href="#一、Mybatis简介" class="headerlink" title="一、Mybatis简介"></a>一、Mybatis简介</h1>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/27/Mybatis-%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/25/%E5%9B%BE%E5%83%8F%E6%B5%8B%E8%AF%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E7%94%B0.jpg">
-      <meta itemprop="name" content="ZM">
-      <meta itemprop="description" content="一个旅人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z' B">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/25/%E5%9B%BE%E5%83%8F%E6%B5%8B%E8%AF%95/" class="post-title-link" itemprop="url">图像测试</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2020-08-25 15:29:47 / 修改时间：15:43:46" itemprop="dateCreated datePublished" datetime="2020-08-25T15:29:47+08:00">2020-08-25</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/08/25/%E5%9B%BE%E5%83%8F%E6%B5%8B%E8%AF%95/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/25/%E5%9B%BE%E5%83%8F%E6%B5%8B%E8%AF%95/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><img src="http://qflrz833q.hn-bkt.clouddn.com/2019-09-05-20-49-27_0.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      
-
-
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/25/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E7%94%B0.jpg">
-      <meta itemprop="name" content="ZM">
-      <meta itemprop="description" content="一个旅人">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z' B">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/25/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2020-08-25 15:03:18 / 修改时间：23:52:43" itemprop="dateCreated datePublished" datetime="2020-08-25T15:03:18+08:00">2020-08-25</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/08/25/hello-world/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/25/hello-world/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>367</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/25/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          </div>
     </footer>
   </article>
   
@@ -2472,14 +1240,9 @@
   
 
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
 
       
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -2660,7 +1423,7 @@ NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
     new Valine(Object.assign({
       el  : '#valine-comments',
-      path: "/",
+      path: "/2020/09/01/MySql/",
     }, {"enable":true,"appId":"R7y5d0whkE5sfR3jWGR7gjg0-gzGzoHsz","appKey":"FAs4E0xBMk1Dwe9Q2iEex0d2","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":false,"comment_count":true,"recordIP":false,"serverURLs":null,"enableQQ":false,"requiredFields":[]}
     ));
   }, window.Valine);
