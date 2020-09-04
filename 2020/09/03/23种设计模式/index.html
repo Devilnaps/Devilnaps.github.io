@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/%E5%82%A8%E5%80%BC%E7%AE%A1%E7%90%86.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/%E5%82%A8%E5%80%BC%E7%AE%A1%E7%90%86.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Montserrat:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"buttons","active":"valine","storage":true,"lazyload":false,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+
+  <meta name="description" content="一、创建型模式（五种）1、用于创建对象，包括单例模式、工厂模式、抽象工厂模式、建造者模式、原型模式共五种。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="23种设计模式">
+<meta property="og:url" content="http://yoursite.com/2020/09/03/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Z&#39; B">
+<meta property="og:description" content="一、创建型模式（五种）1、用于创建对象，包括单例模式、工厂模式、抽象工厂模式、建造者模式、原型模式共五种。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200903131900.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200903131806.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200903135153.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200903144302.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200903160438.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200903182912.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200904094806.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200904102535.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/bridge.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/composite.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/decorator.png">
+<meta property="og:image" content="c:/Users/yueke/Desktop/flyweight.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200904144511.png">
+<meta property="og:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/chainOfResponsibility.png">
+<meta property="article:published_time" content="2020-09-03T00:24:21.000Z">
+<meta property="article:modified_time" content="2020-09-04T07:44:22.828Z">
+<meta property="article:author" content="ZM">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="设计模式">
+<meta property="article:tag" content="GOF23">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/devilnaps/picbed/raw/master/img/20200903131900.png">
+
+
+<link rel="canonical" href="http://yoursite.com/2020/09/03/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>23种设计模式 | Z' B</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Z' B" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Z' B</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录录</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%BA%94%E7%A7%8D%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">一、创建型模式（五种）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E7%94%A8%E4%BA%8E%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%EF%BC%8C%E5%8C%85%E6%8B%AC%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E3%80%81%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E3%80%81%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E3%80%81%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F%E3%80%81%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%E5%85%B1%E4%BA%94%E7%A7%8D%E3%80%82"><span class="nav-number">1.1.</span> <span class="nav-text">1、用于创建对象，包括单例模式、工厂模式、抽象工厂模式、建造者模式、原型模式共五种。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">2、单例模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%AE%9E%E7%8E%B0%E4%BA%86%E5%88%9B%E5%BB%BA%E8%80%85%E5%92%8C%E8%B0%83%E7%94%A8%E8%80%85%E6%98%AF%E5%88%86%E7%A6%BB%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">3、工厂模式（实现了创建者和调用者是分离）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text">4、抽象工厂模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.5.</span> <span class="nav-text">5、建造者模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%88prototype%EF%BC%89"><span class="nav-number">1.6.</span> <span class="nav-text">6、原型模式（prototype）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%83%E7%A7%8D%EF%BC%89%EF%BC%88%E4%BB%8E%E7%BB%93%E6%9E%84%E4%B8%8A%E5%AE%9E%E7%8E%B0%E6%9D%BE%E8%80%A6%E5%90%88%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">二、结构型模式（七种）（从结构上实现松耦合）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E3%80%81%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%E3%80%81%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F%E3%80%81%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%E3%80%81%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F%E3%80%81%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F%E3%80%81%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E5%85%B1%E4%B8%83%E7%A7%8D%E3%80%82"><span class="nav-number">2.1.</span> <span class="nav-text">1、适配器模式、桥接模式、装饰模式、组合模式、外观模式、享元模式、代理模式共七种。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%EF%BC%88adapter%EF%BC%89%EF%BC%88%E4%BD%9C%E7%94%A8%E4%BA%8E%E6%8E%A5%E5%8F%A3%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">2、适配器模式（adapter）（作用于接口）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%EF%BC%88Proxy-pattern%EF%BC%89%EF%BC%88%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">3、代理模式（Proxy pattern）（）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%AF%B9%E6%AF%94%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%EF%BC%9B%E9%80%82%E7%94%A8%E4%BA%8E%E5%A4%9A%E7%BB%A7%E6%89%BF%E7%BB%93%E6%9E%84%EF%BC%8C%E4%B8%8E%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F%E7%9B%B8%E6%AF%94%E6%9B%B4%E6%B3%A8%E9%87%8D%E5%A4%9A%E7%BB%B4%E5%BA%A6%E7%9A%84%E7%BB%A7%E6%89%BF%EF%BC%89"><span class="nav-number">2.4.</span> <span class="nav-text">4、桥接模式（对比抽象工厂模式；适用于多继承结构，与装饰器模式相比更注重多维度的继承）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%EF%BC%88composite%EF%BC%89-%E5%A4%84%E7%90%86%E6%A0%91%E5%BD%A2%E7%BB%93%E6%9E%84"><span class="nav-number">2.5.</span> <span class="nav-text">5、组合模式（composite）(处理树形结构)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F%EF%BC%88decorator%EF%BC%89%EF%BC%88%E6%9B%BF%E4%BB%A3%E7%BB%A7%E6%89%BF%EF%BC%8C%E4%B8%8E%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%E7%9B%B8%E6%AF%94%E6%9B%B4%E6%B3%A8%E9%87%8D%E5%8A%9F%E8%83%BD%EF%BC%89"><span class="nav-number">2.6.</span> <span class="nav-text">6、装饰模式（decorator）（替代继承，与桥接模式相比更注重功能）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7%E3%80%81%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.7.</span> <span class="nav-text">7、外观模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8%E3%80%81%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F%EF%BC%88FlyWeight%EF%BC%89%EF%BC%88%E5%9B%B4%E6%A3%8B%E8%BD%AF%E4%BB%B6%EF%BC%89"><span class="nav-number">2.8.</span> <span class="nav-text">8、享元模式（FlyWeight）（围棋软件）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%8D%81%E4%B8%80%E7%A7%8D%EF%BC%8C%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E4%BA%A4%E4%BA%92%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">三、行为型模式（十一种，对象之间的相互交互）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.1.</span> <span class="nav-text">1、职责链模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%EF%BC%88iterator%EF%BC%89%EF%BC%9A%E6%B8%B8%E6%A0%87%EF%BC%88cursor%EF%BC%89%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.2.</span> <span class="nav-text">2、迭代器模式（iterator）：游标（cursor）模式</span></a></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ZM"
+      src="/images/%E7%94%B0.jpg">
+  <p class="site-author-name" itemprop="name">ZM</p>
+  <div class="site-description" itemprop="description">一个旅人</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yourname" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://plus.google.com/yourname" title="Google → https:&#x2F;&#x2F;plus.google.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-google fa-fw"></i>Google</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/yourname" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+
+
+<!-- none-select-br -->
+
+<p></p>
+
+
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+<script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_wh.js"></script>
+
+<!-- hitokoto -->
+
+<div class="hitokoto-title">
+	<i class="fa fa-paragraph"></i>
+	<b>一言</b>
+</div>
+
+<div id="hitokoto">:D 获取中...</div>
+<i id="hitofrom">:D 获取中...</i>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + data.hitokoto;
+      var hitofrom = document.getElementById('hitofrom');
+      hitofrom.innerText = "——" + data.from + '\xa0'; 
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
+
+
+
+
+      </section>
+
+        
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/yourname" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/03/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E7%94%B0.jpg">
+      <meta itemprop="name" content="ZM">
+      <meta itemprop="description" content="一个旅人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z' B">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          23种设计模式
+        </h1>
+
+        <div class="post-meta-container">
+          
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-09-03 08:24:21" itemprop="dateCreated datePublished" datetime="2020-09-03T08:24:21+08:00">2020-09-03</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-09-04 15:44:22" itemprop="dateModified" datetime="2020-09-04T15:44:22+08:00">2020-09-04</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/09/03/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/03/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>9.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="一、创建型模式（五种）"><a href="#一、创建型模式（五种）" class="headerlink" title="一、创建型模式（五种）"></a>一、创建型模式（五种）</h1><h2 id="1、用于创建对象，包括单例模式、工厂模式、抽象工厂模式、建造者模式、原型模式共五种。"><a href="#1、用于创建对象，包括单例模式、工厂模式、抽象工厂模式、建造者模式、原型模式共五种。" class="headerlink" title="1、用于创建对象，包括单例模式、工厂模式、抽象工厂模式、建造者模式、原型模式共五种。"></a>1、用于创建对象，包括单例模式、工厂模式、抽象工厂模式、建造者模式、原型模式共五种。</h2><a id="more"></a>
+
+<h2 id="2、单例模式"><a href="#2、单例模式" class="headerlink" title="2、单例模式"></a>2、单例模式</h2><p>2.1、保证一个类只有一个实例，并且提供一个访问该实例的全局访问点。</p>
+<p>2.2、优点</p>
+<p>①由于单例模式只生成一个实例，可以减少系统性能开销，因此可以用于当一个对象实例时需要比较多的资源的情况，比如配置的读取、产生其他依赖对象，让其产生一个单例存储在内存中</p>
+<p>②单例模式还可以提供一个全局的访问点，可以优化公共资源的访问</p>
+<p>2.3、单例模式的实现方式</p>
+<p>①饿汉式（线程安全、调用效率高、不能延时加载）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton1 &#123;</span><br><span class="line">	private static Singleton1 instance &#x3D; new Singleton1();</span><br><span class="line">	</span><br><span class="line">	private Singleton1() &#123;&#125;;</span><br><span class="line"></span><br><span class="line">	public static Singleton1 getInstance() &#123;</span><br><span class="line">		return instance;</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>线程安全：static关键字在类初始化时立即加载，不涉及多线程对象访问该对象的问题，天然线程安全</p>
+<p>调用效率高：没用同步方法（sychronized）</p>
+<p>不能延时加载：在类初始化时立即加载</p>
+<p>劣势：如果只是加载该类，不调用getInstance()，会造成资源浪费</p>
+</blockquote>
+<p>②懒汉式（线程安全、调用效率不高、能延时加载）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton2 &#123;</span><br><span class="line">	private static Singleton2 instance;</span><br><span class="line">	public Singleton2() &#123;&#125;</span><br><span class="line">	</span><br><span class="line">	public static synchronized Singleton2 getInstance &#123;</span><br><span class="line">		if(instance&#x3D;&#x3D;null) &#123;</span><br><span class="line">			instance &#x3D; new Singleton2();</span><br><span class="line">		&#125;</span><br><span class="line">		return instance;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>线程安全：static关键字在类初始化时立即加载，不涉及多线程对象访问该对象的问题，天然线程安全</p>
+<p>调用效率不高：同步方法（synchronized）</p>
+<p>可以延时加载（lazy load）：真正用时加载，资源利用率高</p>
+<p>劣势：同步方法（synchronized）导致了并发效率较低</p>
+</blockquote>
+<p>③双重检测锁式（doublecheck）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton3 &#123;</span><br><span class="line">	private static Singleton3 instance &#x3D; null;</span><br><span class="line">	public Singleton3() &#123;&#125;</span><br><span class="line">	</span><br><span class="line">	public static Singleton3 getInstance() &#123;</span><br><span class="line">		if(instance&#x3D;&#x3D;null) &#123;</span><br><span class="line">			Singleton3 s;</span><br><span class="line">			synchronized(Singleton3.class) &#123;</span><br><span class="line">				s&#x3D;instance;</span><br><span class="line">				if(s&#x3D;&#x3D;null) &#123;</span><br><span class="line">					synchronized(Singleton3.class) &#123;</span><br><span class="line">						if(s&#x3D;&#x3D;null) &#123;</span><br><span class="line">							s&#x3D;new Singleton3();</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">					instance&#x3D;s;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		return instance;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>把同步块放在了if下面进行判断，只有第一次才进行同步，与饿汉式相比减少了不必要的资源浪费，与懒汉式相比提高了执行效率</p>
+</blockquote>
+<p>④静态内部式（线程安全、调用效率高、能延时加载）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton4 &#123;</span><br><span class="line">	&#x2F;&#x2F;静态内部类</span><br><span class="line">	private static class SingletonInstance&#123;</span><br><span class="line">		private static final Singleton4 instance &#x3D; new Singleton4();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	private Singleton4() &#123;&#125;</span><br><span class="line">	</span><br><span class="line">	public static Singleton4 getInstance() &#123;</span><br><span class="line">		return SingletonInstance.instance;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>只有在真正调用getInstance()方法时才会加载静态内部类</p>
+<p>static final类型的instance在内存中只有一个，且只能被赋值一次，保证了线程安全</p>
+<p>兼备了高效并发和延迟加载</p>
+</blockquote>
+<p>⑤枚举式（线程安全、调用效率高、不能延时加载）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public enum Singleton5 &#123;</span><br><span class="line">	INSTANCE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>枚举本身就是单例模式，由JVM从根本上提供保证。避免了通过反射和反序列化的漏洞</p>
+<p>劣势：无延迟加载</p>
+</blockquote>
+<p>2.4、通过反射和反序列化可以破解上面呢几种单例实现方式（除枚举外）</p>
+<p>①破解</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public class SingletonBreak &#123;</span><br><span class="line">	public static void main(String[] args) throws Exception &#123;</span><br><span class="line">		Singleton2 s2&#x3D;new Singleton2().getSingletin2();</span><br><span class="line">		Singleton2 s3&#x3D;new Singleton2().getSingletin2();</span><br><span class="line">		System.out.println(s2);</span><br><span class="line">		System.out.println(s3);</span><br><span class="line">		System.out.println(s2&#x3D;&#x3D;s3);</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;通过反射调用私有构造器</span><br><span class="line">		Class&lt;Singleton2&gt; clazz&#x3D;(Class&lt;Singleton2&gt;)Class.forName(&quot;cn.nap.single.Singleton2&quot;);</span><br><span class="line">		Constructor&lt;Singleton2&gt; c&#x3D; clazz.getDeclaredConstructor(null);</span><br><span class="line">		</span><br><span class="line">		Singleton2 s&#x3D;c.newInstance();</span><br><span class="line">		Singleton2 s1&#x3D;c.newInstance();</span><br><span class="line">		System.out.println(s);</span><br><span class="line">		System.out.println(s1);</span><br><span class="line">		System.out.println(s&#x3D;&#x3D;s1);</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;通过反序列化方式构造多个对象</span><br><span class="line">		FileOutputStream fos&#x3D;new FileOutputStream(&quot;d:&#x2F;a.txt&quot;);</span><br><span class="line">		ObjectOutputStream oos&#x3D;new ObjectOutputStream(fos);</span><br><span class="line">		oos.writeObject(s2);</span><br><span class="line">		oos.close();</span><br><span class="line">		fos.close();</span><br><span class="line">		</span><br><span class="line">		ObjectInputStream ois&#x3D;new ObjectInputStream(new FileInputStream(&quot;d:&#x2F;a.txt&quot;));</span><br><span class="line">		Singleton2 s4&#x3D;(Singleton2) ois.readObject();</span><br><span class="line">		System.out.println(s2);</span><br><span class="line">		System.out.println(s4);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>②防止破解方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton2 implements Serializable&#123;</span><br><span class="line">	private static Singleton2 instance;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;禁止反射破解</span><br><span class="line">	public Singleton2() &#123;</span><br><span class="line">		if(instance!&#x3D;null) &#123;</span><br><span class="line">			throw new RuntimeException();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static synchronized Singleton2 getSingletin2() &#123;</span><br><span class="line">		if(instance&#x3D;&#x3D;null) &#123;</span><br><span class="line">			instance &#x3D; new Singleton2();</span><br><span class="line">		&#125;</span><br><span class="line">		return instance;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;禁止反序列化破解单例,在反序列时如果有该方法，会自动调用，则不需要单独创建对象</span><br><span class="line">	private Object readResolve() throws ObjectStreamException&#123;</span><br><span class="line">		return instance;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.5、效率测试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public class SingletonTest &#123;</span><br><span class="line">	public static void main(String[] args) throws Exception &#123;</span><br><span class="line">		long start&#x3D;System.currentTimeMillis();</span><br><span class="line">		int threadNum&#x3D;1000;</span><br><span class="line">		CountDownLatch c&#x3D;new CountDownLatch(threadNum);</span><br><span class="line">		for(int i&#x3D;0;i&lt;threadNum;i++) &#123;</span><br><span class="line">			new Thread(new Runnable() &#123;</span><br><span class="line">				@Override</span><br><span class="line">				public void run() &#123;</span><br><span class="line">					for(int i&#x3D;0;i&lt;10000;i++) &#123;</span><br><span class="line">						Object o&#x3D;Singleton1.getInstance();</span><br><span class="line">&#x2F;&#x2F;						Object o&#x3D;Singleton2.getInstance();</span><br><span class="line">&#x2F;&#x2F;						Object o&#x3D;Singleton3.getInstance();</span><br><span class="line">&#x2F;&#x2F;						Object o&#x3D;Singleton4.getInstance();</span><br><span class="line">&#x2F;&#x2F;						Object o&#x3D;Singleton5.INSTANCE;</span><br><span class="line">					&#125;</span><br><span class="line">					c.countDown();&#x2F;&#x2F;线程减一</span><br><span class="line">				&#125;		</span><br><span class="line">			&#125;</span><br><span class="line">					).start();</span><br><span class="line">		&#125;</span><br><span class="line">		c.await();&#x2F;&#x2F;main线程阻塞</span><br><span class="line">		long end&#x3D;System.currentTimeMillis();</span><br><span class="line">		System.out.println(end-start);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.6、常见应用场景：</p>
+<p>①Window的任务管理器、回收站、文件系统</p>
+<p>②项目中读取配置文件的类，一般只有一个对象</p>
+<p>③网站的计数器采用单例，否则难以同步</p>
+<p>④应用程序的日志</p>
+<p>⑤Application（servlet）</p>
+<p>⑥Spring中每个bean，可以进行管理</p>
+<p>⑦在servlet中，每个Servlet是单例</p>
+<p>⑧SpringMVC中，控制器对象</p>
+<p>⑨数据库连接池的设计采用单例</p>
+<h2 id="3、工厂模式（实现了创建者和调用者是分离）"><a href="#3、工厂模式（实现了创建者和调用者是分离）" class="headerlink" title="3、工厂模式（实现了创建者和调用者是分离）"></a>3、工厂模式（实现了创建者和调用者是分离）</h2><p>3.1、本质：</p>
+<p>①实例化对象时用工厂方法代替new</p>
+<p>②将选择实现类、创建对象统一管理，将调用者跟实现类解耦</p>
+<blockquote>
+<p>简单工厂模式：用来生产同一等级结构的任意产品，对于增加的新产品，需要修改代码</p>
+<p>工厂方法模式：用于生产同一等级结构的固定产品，支持增加任意产品</p>
+<p>抽象工厂模式：用于生产不同品牌的全部产品，支持增加产品族，不能增加新产品</p>
+</blockquote>
+<p>3.2、简单工厂模式</p>
+<p>①用来生产同一等级结构的任意产品，对于增加的新产品，需要修改代码（else）。</p>
+<p>②简单工厂模式也叫静态工厂模式，工厂类一般使用静态方法，方便调用，通过接受的参数返回对应的对象实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class CarFactory &#123;</span><br><span class="line">	public static Car createCar(String carType) &#123;</span><br><span class="line">		if(&quot;Audi&quot;.equals(carType)) &#123;</span><br><span class="line">			return new Audi();</span><br><span class="line">		&#125;else if(&quot;Byd&quot;.equals(carType))&#123;</span><br><span class="line">			return new Byd();</span><br><span class="line">		&#125;else &#123;</span><br><span class="line">			return null;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200903131900.png" style="zoom:50%;" />
+
+<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200903131806.png" style="zoom:50%;" />
+
+<p>3.3、工厂方法模式</p>
+<p>①用于生产同一等级结构的固定产品，支持增加任意产品</p>
+<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200903135153.png" style="zoom:50%;" />
+
+<blockquote>
+<p>简单工厂与工厂方法模式：</p>
+<p>结构复杂度：简单工厂只要一个工厂类；工厂方法模式的类会随产品的增加而增加</p>
+<p>代码复杂度：简单工厂模式在增加产品时需要在工厂类中添加代码；工厂方法模式只要完成一个产品的任务，代码简洁</p>
+<p>客户端编程难度：简单工厂模式的工厂类一般使用静态方法，客户端无需实例化；工厂方法模式需要实例化</p>
+<p>管理难度：工厂方法模式较复杂</p>
+</blockquote>
+<p>3.4、应用场景</p>
+<p>spring中IOC容器创建管理bean;</p>
+<p>反射中class对象的newInstance();</p>
+<h2 id="4、抽象工厂模式"><a href="#4、抽象工厂模式" class="headerlink" title="4、抽象工厂模式"></a>4、抽象工厂模式</h2><p>①用于生产不同产品族的全部产品，通过下图框中的排列组合增加。支持增加产品族，不能增加新产品</p>
+<p><img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200903144302.png"></p>
+<h2 id="5、建造者模式"><a href="#5、建造者模式" class="headerlink" title="5、建造者模式"></a>5、建造者模式</h2><p>5.1、本质：</p>
+<p>①分离了对象子组件的构造（Builder）和装配（Director），实现了解耦</p>
+<p>②构建器不同和装配顺序可以实例不同的对象，实现了复用</p>
+<p><img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200903160438.png"></p>
+<p>5.2、应用场景：</p>
+<p>①StringBuilder类的append方法</p>
+<p>②SQL中的PrepareStatement</p>
+<p>③JDO中的DOMBuilder、SAXBuilder</p>
+<h2 id="6、原型模式（prototype）"><a href="#6、原型模式（prototype）" class="headerlink" title="6、原型模式（prototype）"></a>6、原型模式（prototype）</h2><p>6.1、本质</p>
+<p>①java克隆技术，以某个对象为原型，复制出新对象</p>
+<p>②克隆不同于new，克隆出的对象的值与原型对象相同，并且改变克隆值不会对原对象造成影响</p>
+<p>③效率高，避免了重新执行构造过程</p>
+<p>6.2、实现克隆：通过实现Cloneable接口和Object的本地方法clone()。</p>
+<p><code>克隆有克隆和深克隆两种：</code></p>
+<p>深克隆实现方法一：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class Sheep implements Cloneable&#123;</span><br><span class="line">	private String name;</span><br><span class="line">	private Date birthday;</span><br><span class="line">	</span><br><span class="line">	@Override</span><br><span class="line">	protected Object clone() throws CloneNotSupportedException &#123;</span><br><span class="line">		Object obj&#x3D;super.clone();</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F;深克隆（deep clone）</span><br><span class="line">		Sheep s&#x3D;(Sheep)obj;</span><br><span class="line">		s.birthday&#x3D;(Date) this.birthday .clone();</span><br><span class="line">		&#x2F;&#x2F;深克隆结束</span><br><span class="line">		</span><br><span class="line">		return obj;</span><br><span class="line">	&#125;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>深克隆实现方法二：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class client &#123;</span><br><span class="line">	public static void main(String[] args) throws CloneNotSupportedException, Exception &#123;</span><br><span class="line">		Date date&#x3D;new Date(20202020);</span><br><span class="line">		Sheep s&#x3D;new Sheep(&quot;name&quot;,date);</span><br><span class="line">		System.out.println(s.getName()+s.getBirthday());</span><br><span class="line">			</span><br><span class="line">		&#x2F;&#x2F;通过序列化和反序列化实现深复制</span><br><span class="line">		ByteArrayOutputStream bos&#x3D; new ByteArrayOutputStream();</span><br><span class="line">		ObjectOutputStream oos&#x3D;new ObjectOutputStream(bos);</span><br><span class="line">		oos.writeObject(s);</span><br><span class="line">		byte[] bytes&#x3D;bos.toByteArray();</span><br><span class="line">		</span><br><span class="line">		ByteArrayInputStream bis&#x3D;new ByteArrayInputStream(bytes);</span><br><span class="line">		ObjectInputStream ois&#x3D;new ObjectInputStream(bis);</span><br><span class="line">		</span><br><span class="line">		Sheep s2&#x3D;(Sheep)ois.readObject();</span><br><span class="line">		</span><br><span class="line">		date.setTime(50505050);</span><br><span class="line">		System.out.println(s2.getName()+s2.getBirthday());</span><br><span class="line">		System.out.println(s.getName()+s.getBirthday());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="二、结构型模式（七种）（从结构上实现松耦合）"><a href="#二、结构型模式（七种）（从结构上实现松耦合）" class="headerlink" title="二、结构型模式（七种）（从结构上实现松耦合）"></a>二、结构型模式（七种）（从结构上实现松耦合）</h1><h2 id="1、适配器模式、桥接模式、装饰模式、组合模式、外观模式、享元模式、代理模式共七种。"><a href="#1、适配器模式、桥接模式、装饰模式、组合模式、外观模式、享元模式、代理模式共七种。" class="headerlink" title="1、适配器模式、桥接模式、装饰模式、组合模式、外观模式、享元模式、代理模式共七种。"></a>1、适配器模式、桥接模式、装饰模式、组合模式、外观模式、享元模式、代理模式共七种。</h2><h2 id="2、适配器模式（adapter）（作用于接口）"><a href="#2、适配器模式（adapter）（作用于接口）" class="headerlink" title="2、适配器模式（adapter）（作用于接口）"></a>2、适配器模式（adapter）（作用于接口）</h2><p>2.1、本质：</p>
+<p>①将一个类的接口转换成客户希望的另外一个接口：使得原本由于接口不兼容的类可以一起工作</p>
+<p>②在接口中有</p>
+<blockquote>
+<p>目标接口（Target）：具体的或抽象的类、接口。客户所希望的</p>
+<p>需要适配的类（Adaptee）：需要适配的类或适配者类，一般为一些客户需要的功能</p>
+<p>适配器（Adapter）：通过包装（继承或组合Adaptee）一个需要适配的对象，把原接口转换成目标接口（Target）</p>
+</blockquote>
+<p>2.2、实现方式</p>
+<p>方式一：继承</p>
+<img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200903182912.png" style="zoom: 33%;" />
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class Adapter extends Adaptee implements Target&#123;</span><br><span class="line">	@Override</span><br><span class="line">	public void handleReq() &#123;</span><br><span class="line">		super.request();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Client &#123;</span><br><span class="line">	public void test(Target t)&#123;</span><br><span class="line">		t.handleReq();</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Client c&#x3D;new Client();</span><br><span class="line">		Target t&#x3D;new Adapter();</span><br><span class="line">		</span><br><span class="line">		c.test(t);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方式二：组合</p>
+<p>2.3、应用场景</p>
+<p>①旧系统的升级和改造</p>
+<p>②java.io.InputStreamReader(InputStream)</p>
+<p>java.io.OutputStreamWriter(OutputStream)</p>
+<h2 id="3、代理模式（Proxy-pattern）（）"><a href="#3、代理模式（Proxy-pattern）（）" class="headerlink" title="3、代理模式（Proxy pattern）（）"></a>3、代理模式（Proxy pattern）（）</h2><p>3.1、本质：</p>
+<p>①通过代理控制对对象的访问。</p>
+<p>②可以详细控制访问某个对象的方法，即可以对该方法做一些通知（AOP的微观实现），从而实现将统一流程代码放在代理类中处理</p>
+<p>3.2、核心角色</p>
+<p>①抽象角色：定义代理角色和真实角色的公共对外方法</p>
+<p>②真实角色：关注真正的业务逻辑</p>
+<p>实现抽象角色，定义真实角色所需要的业务逻辑，供代理角色调用</p>
+<p>③代理角色：（处理统一的流程控制）</p>
+<p>实现抽象角色，代理真实角色，通过真实角色的业务逻辑方法来实现抽象方法，并且可以附加自己的操作</p>
+<p>3.3、实现静态代理</p>
+<p><img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200904094806.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Client &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Star real&#x3D;new RealStar();</span><br><span class="line">		Star proxy &#x3D;new ProxyStar(real);</span><br><span class="line">		proxy.sing();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.4、实现动态代理，动态生成代理类</p>
+<p>①JDK自带的动态代理</p>
+<blockquote>
+<p>java.lang.reflect.Proxy：动态生成代理类和对象</p>
+<p>java.lang.reflect.InvocationHandler(处理器接口)：通过invoke()方法对真实角色进行访问；每次通过Proxy生成代理类时都要指定对应的处理器对象</p>
+</blockquote>
+<p><img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200904102535.png"></p>
+<p>3.5、应用场景</p>
+<p>Spring中AOP声明式事务的实现</p>
+<p>mybatis中实现拦截器</p>
+<h2 id="4、桥接模式（对比抽象工厂模式；适用于多继承结构，与装饰器模式相比更注重多维度的继承）"><a href="#4、桥接模式（对比抽象工厂模式；适用于多继承结构，与装饰器模式相比更注重多维度的继承）" class="headerlink" title="4、桥接模式（对比抽象工厂模式；适用于多继承结构，与装饰器模式相比更注重多维度的继承）"></a>4、桥接模式（对比抽象工厂模式；适用于多继承结构，与装饰器模式相比更注重多维度的继承）</h2><p>4.1、实现</p>
+<img src="https://gitee.com/devilnaps/picbed/raw/master/img/bridge.png" style="zoom:50%;" />
+
+
+
+<p>4.2、应用场景</p>
+<p>①JDBC驱动程序</p>
+<p>②OA系统的消息处理：业务紧急类型和消息发送方式</p>
+<p>③奖金计算：奖金类型和部门</p>
+<h2 id="5、组合模式（composite）-处理树形结构"><a href="#5、组合模式（composite）-处理树形结构" class="headerlink" title="5、组合模式（composite）(处理树形结构)"></a>5、组合模式（composite）(处理树形结构)</h2><p>5.1、本质</p>
+<p>把部分和整体的关系用树形结构表示，使得客户端可以使用统一的方式处理部分对象和整体对象</p>
+<p>5.2、核心角色</p>
+<blockquote>
+<p>抽象构件（Component）：定义了叶子和容器的共同点</p>
+<p>叶子构件（Leaf）：无子节点</p>
+<p>容器构件（Composite）：有容器特征，包含子节点</p>
+</blockquote>
+<p>5.3、实现</p>
+<img src="https://gitee.com/devilnaps/picbed/raw/master/img/composite.png" style="zoom:50%;" />
+
+<p>5.4、应用场景</p>
+<p>①Window资源管理器</p>
+<p>②XML文件解析</p>
+<p>③OA组织架构</p>
+<p>④Junit单元测试框架</p>
+<h2 id="6、装饰模式（decorator）（替代继承，与桥接模式相比更注重功能）"><a href="#6、装饰模式（decorator）（替代继承，与桥接模式相比更注重功能）" class="headerlink" title="6、装饰模式（decorator）（替代继承，与桥接模式相比更注重功能）"></a>6、装饰模式（decorator）（替代继承，与桥接模式相比更注重功能）</h2><p>6.1、本质：动态地为一个对象增加新功能，由于继承会在增加新功能时快速膨胀，装饰模式可以解决这种问题。</p>
+<p>6.2、核心角色：</p>
+<blockquote>
+<p>抽象构件（Component）：真实对象和装饰对象的接口</p>
+<p>具体构件对象（ConcreteComponent）：例如io流中的FileInPutStream、FileOutputStream</p>
+<p>装饰角色（Decorator）：引用抽象构件，接受客户的所有请求，并把这些请求转发给具体构件对象</p>
+<p>具体装饰角色（ConcreteDecorator）：负责该构件对象添加新的装饰</p>
+</blockquote>
+<p>6.3、实现</p>
+<img src="https://gitee.com/devilnaps/picbed/raw/master/img/decorator.png" style="zoom:50%;" />
+
+<p>6.4、应用场景</p>
+<p>①IO流</p>
+<h2 id="7、外观模式"><a href="#7、外观模式" class="headerlink" title="7、外观模式"></a>7、外观模式</h2><p>7.1、核心：为子系统提供统一入口，封装了子系统的复杂性，便于客户调用</p>
+<h2 id="8、享元模式（FlyWeight）（围棋软件）"><a href="#8、享元模式（FlyWeight）（围棋软件）" class="headerlink" title="8、享元模式（FlyWeight）（围棋软件）"></a>8、享元模式（FlyWeight）（围棋软件）</h2><p>8.1、本质：</p>
+<p>①如果有很多个完全相同或相似的对象，可以通过享元模式节省内存</p>
+<p>②享元模式以共享的方式高效地支持大量细粒度对象的重用</p>
+<p>③实现共享的关键是区分了内部状态和外部状态</p>
+<blockquote>
+<p>内部状态：可以共享，不会随环境变化而变化</p>
+<p>外部状态：不可以共享，会随环境变化而变化</p>
+</blockquote>
+<p>8.2、核心角色：</p>
+<blockquote>
+<p>享元工厂类（FlyWeightFactory）：创建管理享元对象，享元池一般为键值对</p>
+<p>抽象享元类（FlyWeight）：接口或抽象方法，声明公共方法</p>
+<p>具体享元类（ConcreteFlyWeight）：为内部状态提供成员变量进行存储</p>
+<p>非共享享元类（UnsharedFlyWeight）：不能被共享的子类，存放外部状态</p>
+</blockquote>
+<p>8.3、实现</p>
+<img src="C:/Users/yueke/Desktop/flyweight.png" alt="flyweight" style="zoom:50%;" />
+
+<p>8.4、应用场景</p>
+<p>①线程池、数据库连接池</p>
+<p>②String类的设计</p>
+<h1 id="三、行为型模式（十一种，对象之间的相互交互）"><a href="#三、行为型模式（十一种，对象之间的相互交互）" class="headerlink" title="三、行为型模式（十一种，对象之间的相互交互）"></a>三、行为型模式（十一种，对象之间的相互交互）</h1><p>模板方法模式、命令模式、迭代器模式、观察者模式、中介者模式、备忘录模式、解释器模式、状态模式、策略模式、职责链模式、访问者模式共十一种。</p>
+<p><img src="https://gitee.com/devilnaps/picbed/raw/master/img/20200904144511.png"></p>
+<h2 id="1、职责链模式"><a href="#1、职责链模式" class="headerlink" title="1、职责链模式"></a>1、职责链模式</h2><p>1.1、实现</p>
+<p><img src="https://gitee.com/devilnaps/picbed/raw/master/img/chainOfResponsibility.png"></p>
+<p>1.2、应用场景</p>
+<p>①try…catch异常机制</p>
+<p>②servlet中过滤器的链式处理</p>
+<p>③Struts2中拦截器的调用</p>
+<h2 id="2、迭代器模式（iterator）：游标（cursor）模式"><a href="#2、迭代器模式（iterator）：游标（cursor）模式" class="headerlink" title="2、迭代器模式（iterator）：游标（cursor）模式"></a>2、迭代器模式（iterator）：游标（cursor）模式</h2><p>2.1、提供了一种可以遍历聚合对象的方式</p>
+<p>2.2、核心角色</p>
+<blockquote>
+<p> 聚合对象：存储数据</p>
+<p>迭代器：遍历数据</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\08\25\spring-笔记\" rel="bookmark">spring 笔记</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\09\04\数据结构与算法\" rel="bookmark">数据结构与算法</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\08\31\SpringBoot\" rel="bookmark">SpringBoot</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\08\30\Maven\" rel="bookmark">Maven</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\08\29\Exception\" rel="bookmark">Exception</a></div>
+    </li>
+  </ul>
+
+
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #FA8072;font-size:10px;">------------- End  <i class="fa fa-hourglass-end" aria-hidden="true"></i>  Thank For Your Reading -------------</div>
+    
+</div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+          
+
+  <div class="followme">
+    <span>欢迎关注我的其它发布渠道</span>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
+              <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag"><i class="fa fa-tag"></i> 设计模式</a>
+              <a href="/tags/GOF23/" rel="tag"><i class="fa fa-tag"></i> GOF23</a>
+          </div>
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/09/02/MySql%E4%BC%98%E5%8C%96/" rel="prev" title="MySql优化">
+                  <i class="fa fa-chevron-left"></i> MySql优化
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/09/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="next" title="数据结构与算法">
+                  数据结构与算法 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+  
+  
+  
+
+
+
+      
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-female"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZM</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">141k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:08</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div><div class="translate-style">
+繁/简：<a id="translateLink" href="javascript:translatePage();">繁体
+</a>
+</div>
+<script type="text/javascript" src="/js/tw_cn.js"></script>
+<script type="text/javascript">
+var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+var cookieDomain = "https://tding.top/"; //Cookie地址, 一定要设定, 通常为你的网址
+var msgToTraditionalChinese = "繁体"; //此处可以更改为你想要显示的文字
+var msgToSimplifiedChinese = "简体"; //同上，但两处均不建议更改
+var translateButtonId = "translateLink"; //默认互换id
+translateInitilization();
+</script>
+
+
+
+<span id="timeDate">载入天数...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("08/25/2020 00:00:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=59rwphh79i5&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id    : 26968,
+      el    : 'wpac-rating',
+      color : '#fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  <script async src="/js/cursor/fireworks.js"></script>
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: "/2020/09/03/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/",
+    }, {"enable":true,"appId":"R7y5d0whkE5sfR3jWGR7gjg0-gzGzoHsz","appKey":"FAs4E0xBMk1Dwe9Q2iEex0d2","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":false,"comment_count":true,"recordIP":false,"serverURLs":null,"enableQQ":false,"requiredFields":[]}
+    ));
+  }, window.Valine);
+});
+</script>
+
+<script type="text/javascript" src="/js/fold_action.js"></script>
+
+  
+
+  <script async src="/js/cursor/firework.js"></script>
+
+  
+  <!--动态线条背景-->
+  <script type="text/javascript"
+  color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+  </script>
+
+  <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow2.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+
